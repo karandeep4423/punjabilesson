@@ -13,8 +13,9 @@ import Lesson from "@/modals/Lesson";
 
 
 const handler = async(req,res)=>{
-let lessons = await Lesson.find();
-res.status(200).json({lessons});
+  const email = "bachiwind3@gmail.com";
+  let lesson = await Lesson.find({ email });
+  res.status(200).json({ lesson });
 
 }
 
