@@ -1,9 +1,21 @@
-import { connectToDatabase } from "@/lib/mongodb";
+// import { connectToDatabase } from "@/lib/mongodb";
 
-export default async function handler(req, res) {
-  let { db } = await connectToDatabase();
+// export default async function handler(req, res) {
+//   let { db } = await connectToDatabase();
 
-  const lessons = await db.collection("lessons").find().toArray();
+//   const lessons = await db.collection("lessons").find().toArray();
 
-  res.status(200).json({ lessons });
+//   res.status(200).json({ lessons });
+// }
+
+import connectedDb from "@/lib/mongodb";
+import Lesson from "@/modals/Lesson";
+
+
+const handler = async(req,res)=>{
+let lessons = await Lesson.find();
+res.status(200).json({lessons});
+
 }
+
+export default connectedDb(handler);
