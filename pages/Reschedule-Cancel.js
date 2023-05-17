@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { toast } from "react-toastify";
 import { Player } from "@lottiefiles/react-lottie-player";
@@ -9,8 +9,7 @@ const Reschedule = () => {
   const [lessonValue, setLessonValue] = useState(null);
   const [resData, setResData] = useState(null);
   const [btnLoader, setBtnLoader] = useState(false);
- 
- 
+
   const fetchLesson = async () => {
     setBtnLoader(true);
     const res = await fetch(`/api/Lesson/getLesson?email=${lessonValue}`);
@@ -136,7 +135,7 @@ const Reschedule = () => {
             className="w-[350px] sm:w-[500px] text-xl h-16 sm:text-2xl focus:shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)] focus:outline-none focus:border-none bg-blue-100  rounded-3xl border-2 border-blue-400 pl-16 pr-6  sm:pr-4 "
             value={lessonValue}
             type="search"
-            onChange={(e) =>setLessonValue(e.target.value)}
+            onChange={(e) => setLessonValue(e.target.value)}
             placeholder="Find your lesson with email"
           ></input>
         </div>
@@ -160,12 +159,12 @@ const Reschedule = () => {
       </div>
       {resData?.lesson.length != 0 ? (
         resData?.lesson.map((slot, index) => (
-          <div className=" mb-16 shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)]  sm:mx-14 md:mx-20 lg:mx-24 mx-6  p-4  md:px-10 lg:px-16  rounded-xl ">
+          <div
+            key={index}
+            className=" mb-16 shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)]  sm:mx-14 md:mx-20 lg:mx-24 mx-6  p-4  md:px-10 lg:px-16  rounded-xl "
+          >
             <h1 className="text-center text-xl font-bold">Lesson details</h1>
-            <div
-              key={index}
-              className="mt-4 break-words rounded-2xl grid  grid-cols-1 sm:grid-cols-2  justify-center  items-center gap-4 text-lg"
-            >
+            <div className="mt-4 break-words rounded-2xl grid  grid-cols-1 sm:grid-cols-2  justify-center  items-center gap-4 text-lg">
               <h1>
                 <span className="font-bold">Email: </span>
                 {slot.email}
@@ -254,5 +253,3 @@ const Reschedule = () => {
 };
 
 export default Reschedule;
-
-

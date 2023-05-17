@@ -98,7 +98,7 @@ const Checkout = () => {
     if (transactionId) {
       paypalSubmit();
     }
-  }, [router.query.schdule&&router.query.timezone]);
+  }, [transactionId,router.query.schdule,router.query.timezone,router.query.lesson,router.query.packId]);
 
   const PayPal = (e) => {
     e.preventDefault();

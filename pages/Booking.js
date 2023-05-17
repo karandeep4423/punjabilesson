@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 export default function Booking() {
   const MySwal = withReactContent(Swal);
-  const [name, setName] = useState({firstName:"",lastName:""});
+  const [name, setName] = useState({ firstName: "", lastName: "" });
   const [email, setEmail] = useState(null);
   const [amount, setAmount] = useState(null);
 
@@ -21,9 +21,10 @@ export default function Booking() {
       delay: 100,
       once: true,
     });
-    email && handleSubmit();
-
-  },[email && amount]);
+    if (email && amount && name) {
+      handleSubmit();
+    }
+  }, [email,amount,name]);
 
   const handleSubmit = async () => {
     const res = await fetch("/api/LessonPack/addLessonPack", {
@@ -71,7 +72,10 @@ export default function Booking() {
             onApprove={async (data, actions) => {
               const details = await actions.order.capture();
               await setEmail(details.payer.email_address);
-              await setName({firstName:details.payer.name.given_name,lastName:details?.payer.name.surname});
+              await setName({
+                firstName: details.payer.name.given_name,
+                lastName: details?.payer.name.surname,
+              });
               await setAmount(details.purchase_units[0].amount.value);
             }}
           />
@@ -119,14 +123,17 @@ export default function Booking() {
           <Link
             href={{ pathname: "/Book_lesson", query: { lesson: "single" } }}
           >
-            <button
-              className="mt-4 font-medium px-16 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300"
-            >
+            <button className="mt-4 font-medium px-16 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">
               <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
               Get Started
             </button>
           </Link>
-          <Link className="text-lg mb-3 underline decoration-sky-500 underline-offset-1 hover:text-sky-600 " href={"/Reschedule-Cancel"}>Reschedule or cancel lesson</Link>
+          <Link
+            className="text-lg mb-3 underline decoration-sky-500 underline-offset-1 hover:text-sky-600 "
+            href={"/Reschedule-Cancel"}
+          >
+            Reschedule or cancel lesson
+          </Link>
           <div
             data-aos="fade-up"
             className="flex text-black flex-col space-y-3 px-8 font-normal  "
@@ -222,7 +229,8 @@ export default function Booking() {
             Buy Pack
           </h1>
           <p data-aos="fade-up" className="text-lg px-3">
-            In this pack of 5 hours, you would get 10% off the usual price. After purchasing the pack, you can book your first lesson.
+            In this pack of 5 hours, you would get 10% off the usual price.
+            After purchasing the pack, you can book your first lesson.
           </p>
           <h1 data-aos="fade-up" className="text-5xl  font-bold">
             $45
@@ -237,8 +245,18 @@ export default function Booking() {
             <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
             Get Started
           </button>
-          <Link className="text-lg mb-0 underline decoration-sky-500 underline-offset-1 hover:text-sky-600 " href={"/AlreadyBought"}>Already bought pack</Link>
-          <Link className="text-lg mb-3 underline decoration-sky-500 underline-offset-1 hover:text-sky-600 " href={"/Reschedule-Cancel"}>Reschedule or cancel lesson</Link>
+          <Link
+            className="text-lg mb-0 underline decoration-sky-500 underline-offset-1 hover:text-sky-600 "
+            href={"/AlreadyBought"}
+          >
+            Already bought pack
+          </Link>
+          <Link
+            className="text-lg mb-3 underline decoration-sky-500 underline-offset-1 hover:text-sky-600 "
+            href={"/Reschedule-Cancel"}
+          >
+            Reschedule or cancel lesson
+          </Link>
           <div
             data-aos="fade-up"
             className="flex  text-black flex-col space-y-3 px-8 font-normal"
@@ -355,8 +373,7 @@ export default function Booking() {
           </h1>
           <p data-aos="fade-up" className=" px-3">
             Group lessons will be held based on the number of students who can
-            attend at once, and we use pooling to determine who is
-            available.
+            attend at once, and we use pooling to determine who is available.
           </p>
           <h1 data-aos="fade-up" className="text-5xl  font-bold">
             $7
@@ -365,14 +382,17 @@ export default function Booking() {
             </span>
           </h1>
           <Link href={{ pathname: "/Book_lesson", query: { lesson: "group" } }}>
-            <button
-              className="mt-4 font-medium px-16 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300"
-            >
+            <button className="mt-4 font-medium px-16 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">
               <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
               Get Started
             </button>
           </Link>
-          <Link className="text-lg mb-3 underline decoration-sky-500 underline-offset-1 hover:text-sky-600 " href={"/Reschedule-Cancel"}>Reschedule or cancel lesson</Link>
+          <Link
+            className="text-lg mb-3 underline decoration-sky-500 underline-offset-1 hover:text-sky-600 "
+            href={"/Reschedule-Cancel"}
+          >
+            Reschedule or cancel lesson
+          </Link>
           <div
             data-aos="fade-up"
             className="text-black flex flex-col space-y-3 px-8 font-normal"
