@@ -1,5 +1,6 @@
 import Lesson from "@/modals/Lesson";
-import connectedDb from "@/lib/mongodb";
+import connectedDb from "@/middleware/mongodb";
+
 
 const handler = async(req,res)=>{
 let lessons = await Lesson.find();
