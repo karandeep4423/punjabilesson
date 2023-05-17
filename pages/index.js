@@ -10,12 +10,11 @@ import { Pagination, Navigation } from "swiper";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css";
-// import Contact from "./Contact";
+import Contact from "./Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Index = () => {
-
   useEffect(() => {
     AOS.init({
       offset: 100,
@@ -24,8 +23,7 @@ const Index = () => {
       delay: 100,
       once: true,
     });
-  },[]);
-
+  }, []);
   ("eslint-disable");
   const { ref: first, inView: firstSectionIsVisible } = useInView({
     rootMargin: "-200px 0px",
@@ -756,13 +754,12 @@ const Index = () => {
         </div>
       </div>
       <div className="sm:-mt-12">
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </div>
   );
 };
 
 export default Index;
-
 
 
