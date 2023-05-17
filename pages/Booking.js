@@ -21,11 +21,10 @@ export default function Booking() {
       delay: 100,
       once: true,
     });
-    if (email && amount && name) {
-      handleSubmit();
-    }
-  }, [email,amount,name,handleSubmit]);
-
+  }, [email,amount,name]);
+  if (email && amount && name) {
+    handleSubmit();
+  }
   const handleSubmit = async () => {
     const res = await fetch("/api/LessonPack/addLessonPack", {
       method: "POST",

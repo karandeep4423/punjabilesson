@@ -95,11 +95,11 @@ const Checkout = () => {
     setSlotTimezone(router.query.timezone);
     setLessonType(router.query.lesson);
     setPackId(router.query.packId);
-    if (transactionId) {
-      paypalSubmit();
-    }
-  }, [ paypalSubmit,transactionId,router.query.schdule,router.query.timezone,router.query.lesson,router.query.packId]);
+  }, [transactionId,router.query.schdule,router.query.timezone,router.query.lesson,router.query.packId]);
 
+  if (transactionId) {
+    paypalSubmit();
+  }
   const PayPal = (e) => {
     e.preventDefault();
     MySwal.fire({
