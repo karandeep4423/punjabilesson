@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
       <Navbar />
       <Component {...pageProps} />
       <Footer />
-      <ToastContainer />
+      <ToastContainer autoClose={25000}  />
     </div>
   );
 }
