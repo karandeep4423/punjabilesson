@@ -21,11 +21,12 @@ export default function Booking() {
       delay: 100,
       once: true,
     });
+    if(email&&amount&&name){
+      BuyLessonPack();
+    }
   }, [email,amount,name]);
-  if (email && amount && name) {
-    handleSubmit();
-  }
-  const handleSubmit = async () => {
+ 
+  const BuyLessonPack = async () => {
     const res = await fetch("/api/LessonPack/addLessonPack", {
       method: "POST",
       headers: {
@@ -38,6 +39,7 @@ export default function Booking() {
       }),
     });
     const result = await res.json();
+    console.log("lesson pack", result);
     if (result.message == "success") {
       toast.success("Lesson pack has been bought successfully");
       return;

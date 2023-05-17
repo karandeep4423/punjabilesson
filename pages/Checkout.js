@@ -18,7 +18,7 @@ const Checkout = () => {
   const router = useRouter();
   const MySwal = withReactContent(Swal);
 
-  const handleSubmit = async (e) => {
+  const bookLessonPack = async (e) => {
     e.preventDefault();
     const res = await fetch("/api/Lesson/addLessons", {
       method: "POST",
@@ -36,11 +36,12 @@ const Checkout = () => {
       }),
     });
     const result = await res.json();
+    console.log("book lesson pack",result)
     if (result.message == "success") {
       setEmail("");
       setName("");
       setMessage("");
-      updateLessonPack(result?.lessons._id);
+      updatePackWithBookedLesson(result?.lessons._id);
       toast.success("Your lesson has been booked successfully");
       router.push("/Booking");
       return;
@@ -49,7 +50,7 @@ const Checkout = () => {
     }
   };
 
-  const updateLessonPack = async(Id)=>{
+  const updatePackWithBookedLesson = async(Id)=>{
     const response = await fetch(`/api/LessonPack/updateLessonPack?Id=${packId}`,{
       method:"PUT",
       headers:{
@@ -60,46 +61,46 @@ const Checkout = () => {
         }),
     });
     const result = await response.json();
+    console.log("updatelessonpack",result);
     return;
   }
-  const paypalSubmit = async () => {
-    const res = await fetch("/api/Lesson/addLessons", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email,
-        name: name,
-        message: message,
-        slot: slot,
-        slotTimezone: slotTimezone,
-        lessonType: lessonType,
-      }),
-    });
-    const result = await res.json();
-    if (result.message == "success") {
-      setEmail("");
-      setName("");
-      setMessage("");
-      toast.success("Your lesson has been booked successfully");
-      router.push("/Booking");
-      return;
-    } else {
-      toast.error("Server error, Try again");
-    }
-  };
 
   useEffect(() => {
     setSlot(router.query.schdule);
     setSlotTimezone(router.query.timezone);
     setLessonType(router.query.lesson);
     setPackId(router.query.packId);
+    const BookLessonPaypal = async () => {
+      const res = await fetch("/api/Lesson/addLessons", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          name: name,
+          message: message,
+          slot: slot,
+          slotTimezone: slotTimezone,
+          lessonType: lessonType,
+        }),
+      });
+      const result = await res.json();
+      console.log("lesson result",result)
+      if (result.message == "success") {
+        setEmail("");
+        setName("");
+        setMessage("");
+        toast.success("Your lesson has been booked successfully");
+        router.push("/Booking");
+        return;
+      } else {
+        toast.error("Server error, Try again");
+      }
+    };
+    transactionId && BookLessonPaypal();
   }, [transactionId,router.query.schdule,router.query.timezone,router.query.lesson,router.query.packId]);
 
-  if (transactionId) {
-    paypalSubmit();
-  }
   const PayPal = (e) => {
     e.preventDefault();
     MySwal.fire({
@@ -147,11 +148,11 @@ const Checkout = () => {
           <div className="bg-sky-400 mt-14 absolute   mix-blend-multiply filter blur-2xl h-8 w-56 "></div>
         </div>
         <form
-          onSubmit={router.query.lesson == "Pack" ? handleSubmit : PayPal}
+          onSubmit={router.query.lesson == "Pack" ? bookLessonPack : PayPal}
           className="h-fit   shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)] min-w-fit mt-8 rounded-3xl mx-4  sm:mx-32 md:40 lg:mx-56 p-3  md:p-10 mb-16 border-2 border-gray-200"
         >
           <div className="flex gap-3 ml-1 mt-3 mb-3 md:mt-0 justify-center  items-center text-xl ">
-            <Image className="w-12 h-12" alt="checkout" src="checkout.png"></Image>
+            <Image className="w-12 h-12" width={20} height={20} alt="checkout" src="/checkout.png"></Image>
             <h1>
               {router.query.schdule}
               {router.query.timezone}

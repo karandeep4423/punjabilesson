@@ -89,7 +89,7 @@ const AlreadyBought = () => {
             </h1>
           </div>
           <div className="flex justify-center  items-center mt-4">
-            {slot.lessons.length == 2 ?<div className="flex  flex-col gap-2"><h1 className="text-xl font-bold">You attented your all lessons</h1> <Link
+            {slot.lessons.length == 5 ?<div className="flex  flex-col gap-2"><h1 className="text-xl font-bold">You attented your all lessons</h1> <Link
               href={{
                 pathname: "/Booking",
               }}
