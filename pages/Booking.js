@@ -21,31 +21,31 @@ export default function Booking() {
       delay: 100,
       once: true,
     });
-  }, []);
-  useEffect(() => {
-    const handleSubmit = async () => {
-      const res = await fetch("/api/LessonPack/addLessonPack", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          name,
-          amount,
-        }),
-      });
-      const result = await res.json();
-      if (result.message == "success") {
-        toast.success("Lesson pack has been bought successfully");
-        return;
-      } else {
-        toast.error("Server error, Try again");
-        console.log("error", result.message);
-      }
-    };
     email && handleSubmit();
-  }, [email && amount]);
+
+  },[email && amount]);
+
+  const handleSubmit = async () => {
+    const res = await fetch("/api/LessonPack/addLessonPack", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        name,
+        amount,
+      }),
+    });
+    const result = await res.json();
+    if (result.message == "success") {
+      toast.success("Lesson pack has been bought successfully");
+      return;
+    } else {
+      toast.error("Server error, Try again");
+      console.log("error", result.message);
+    }
+  };
 
   const buyPack = () => {
     MySwal.fire({

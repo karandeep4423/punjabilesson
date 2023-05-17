@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import img from "next/image";
-
+import Image from "next/image";
 import Link from "next/link";
 const Navbar = () => {
   const [open, setOpen] = useState(true);
@@ -18,7 +17,7 @@ const Navbar = () => {
           </div>
         </Link>
         <div className="flex items-center lg:hidden">
-          <button onClick={handleShow}>{open?<img alt="icon" width={35} height={35} src="/menu.png"></img>:<img alt="close icon" width={35} height={35} src="/close.png"></img>}</button>
+          <button onClick={handleShow}>{open?<Image alt="icon" width={35} height={35} src="/menu.png"></Image>:<Image alt="close icon" width={35} height={35} src="/close.png"></Image>}</button>
         </div>
         <div
           className={`lg:space-x-6 gap-y-4 text-lg  absolute  justify-between flex flex-col items-center lg:flex-row  z-50  lg:static  lg:w-auto lg:py-0 pb-6  w-full left-0 ${

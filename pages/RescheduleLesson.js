@@ -85,7 +85,7 @@ const RescheduleP = () => {
       setResData(data);
     };
     fetchLesson();
-  }, [router.query.id]);
+  }, [Id]);
 
   const handleSubmit = async () => {
     const res = await fetch("/api/Lesson/rescheduleLesson", {

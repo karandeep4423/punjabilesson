@@ -5,6 +5,7 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { useRouter } from "next/router";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import Image from "next/image";
 const Checkout = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -97,7 +98,7 @@ const Checkout = () => {
     if (transactionId) {
       paypalSubmit();
     }
-  }, []);
+  }, [router.query.schdule&&router.query.timezone]);
 
   const PayPal = (e) => {
     e.preventDefault();
@@ -150,7 +151,7 @@ const Checkout = () => {
           className="h-fit   shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)] min-w-fit mt-8 rounded-3xl mx-4  sm:mx-32 md:40 lg:mx-56 p-3  md:p-10 mb-16 border-2 border-gray-200"
         >
           <div className="flex gap-3 ml-1 mt-3 mb-3 md:mt-0 justify-center  items-center text-xl ">
-            <img className="w-12 h-12" alt="checkout" src="checkout.png"></img>
+            <Image className="w-12 h-12" alt="checkout" src="checkout.png"></Image>
             <h1>
               {router.query.schdule}
               {router.query.timezone}
