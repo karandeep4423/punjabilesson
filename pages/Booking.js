@@ -24,7 +24,7 @@ export default function Booking() {
     if (email && amount && name) {
       handleSubmit();
     }
-  }, [email,amount,name]);
+  }, [email,amount,name,handleSubmit]);
 
   const handleSubmit = async () => {
     const res = await fetch("/api/LessonPack/addLessonPack", {
