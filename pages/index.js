@@ -14,7 +14,8 @@ import "swiper/css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const index = () => {
+const Index = () => {
+
   useEffect(() => {
     AOS.init({
       offset: 100,
@@ -23,7 +24,8 @@ const index = () => {
       delay: 100,
       once: true,
     });
-  }, []);
+  },[]);
+
   ("eslint-disable");
   const { ref: first, inView: firstSectionIsVisible } = useInView({
     rootMargin: "-200px 0px",
@@ -760,7 +762,7 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
 
 
 
