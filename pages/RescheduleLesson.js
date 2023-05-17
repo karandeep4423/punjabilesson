@@ -57,7 +57,6 @@ const RescheduleP = () => {
   }
   const handleOptionChange = (e) => {
     setSelectedOption(e.target.value);
-    console.log("Selected option:", e.target.value);
   };
 
   const previousMonth = () => {

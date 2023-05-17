@@ -39,13 +39,11 @@ export default function Booking() {
       }),
     });
     const result = await res.json();
-    console.log("lesson pack", result);
     if (result.message == "success") {
       toast.success("Lesson pack has been bought successfully");
       return;
     } else {
       toast.error("Server error, Try again");
-      console.log("error", result.message);
     }
   };
 

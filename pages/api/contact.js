@@ -10,7 +10,6 @@ const SES = new AWS.SES(awsConfig);
 
 const sendEmail = async (req, res) => {
   try {
-    console.log("mail data", req.body);
     const params = {
       Source: "hindipunjabitutor@gmail.com",
       Destination: {

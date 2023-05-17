@@ -36,7 +36,6 @@ const Checkout = () => {
       }),
     });
     const result = await res.json();
-    console.log("book lesson pack",result)
     if (result.message == "success") {
       setEmail("");
       setName("");
@@ -61,7 +60,6 @@ const Checkout = () => {
         }),
     });
     const result = await response.json();
-    console.log("updatelessonpack",result);
     return;
   }
 
@@ -86,7 +84,6 @@ const Checkout = () => {
         }),
       });
       const result = await res.json();
-      console.log("lesson result",result)
       if (result.message == "success") {
         setEmail("");
         setName("");
