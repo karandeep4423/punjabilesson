@@ -1,4 +1,5 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Punjabi School is a comprehensive online platform dedicated to supporting Punjabi language learners and enthusiasts. Language learners can easily book personalized lessons tailored to their needs and proficiency levels. By integrating popular payment methods like PayPal and credit cards, the platform ensures a seamless and secure transaction process. 
+![Screenshot 2023-07-06 193646](https://github.com/karandeep4423/punjabischool/assets/89685958/6386689d-a2cd-45e5-a266-10ee966b5a34)
 
 ## Getting Started
 
