@@ -18,7 +18,7 @@ const Reschedule = () => {
     setBtnLoader(false);
   };
 
-  const cancelLesson = (id, email, name, slot, timezone, transactionId) => {
+  const cancelLesson = (id, email, name, slot, timezone, lessonType) => {
     Swal.fire({
       title: "Are you sure you want to cancel the lesson?",
       text: "You won't be able to revert this!",
@@ -35,7 +35,7 @@ const Reschedule = () => {
           "Your lesson has been cancelled successfully.",
           "success"
         );
-        confirmCancelLesson(id, email, name, slot, timezone, transactionId);
+        confirmCancelLesson(id, email, name, slot, timezone, lessonType);
       }
     });
   };
@@ -46,10 +46,10 @@ const Reschedule = () => {
     name,
     slot,
     timezone,
-    transactionId
+    lessonType
   ) => {
     const res = await fetch("/api/Lesson/cancelLesson", {
-      method: "DELETE",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
@@ -59,10 +59,11 @@ const Reschedule = () => {
         name,
         slot,
         timezone,
-        transactionId,
+        lessonType,
       }),
     });
     const result = await res.json();
+    console.log("cancel lesson", result);
     if (result.message == "success") {
       fetchLesson();
       return;
@@ -228,8 +229,7 @@ const Reschedule = () => {
                       slot.name,
                       slot.slot,
                       slot.slotTimezone,
-                      slot.lessonType,
-                      slot.transactionId
+                      slot.lessonType
                     )
                   }
                   className="text-lg w-64  font-medium  py-2 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300"

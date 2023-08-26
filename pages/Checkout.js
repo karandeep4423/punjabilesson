@@ -36,6 +36,7 @@ const Checkout = () => {
       }),
     });
     const result = await res.json();
+    console.log("reposne",result)
     if (result.message == "success") {
       setEmail("");
       setName("");
@@ -84,12 +85,14 @@ const Checkout = () => {
         }),
       });
       const result = await res.json();
+      console.log("reposne",result)
+
       if (result.message == "success") {
         setEmail("");
         setName("");
         setMessage("");
-        toast.success("Your lesson has been booked successfully");
         router.push("/Booking");
+        toast.success("Your lesson has been booked successfully");
         return;
       } else {
         toast.error("Server error, Try again");

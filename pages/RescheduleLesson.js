@@ -19,6 +19,7 @@ import moment from "moment";
 import guess from "moment-timezone";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const RescheduleP = () => {
   const [resData, setResData] = useState(null);
@@ -33,6 +34,7 @@ const RescheduleP = () => {
   const [outlineBtn, setOutlineBtn] = useState(null);
   const [selectedOption, setSelectedOption] = useState(moment.tz.guess());
   const [selectedSlot, setSelectedSlot] = useState(today);
+  const [btnLoader, setBtnLoader] = useState(false);
 
 
   const onOptionClicked = (option) => {
@@ -87,6 +89,7 @@ const RescheduleP = () => {
   }, [Id]);
 
   const handleSubmit = async () => {
+    setBtnLoader(true);
     const res = await fetch("/api/Lesson/rescheduleLesson", {
       method: "PUT",
       headers: {
@@ -102,6 +105,7 @@ const RescheduleP = () => {
     });
     const result = await res.json();
     if (result.message == "success") {
+      setBtnLoader(false);
       toast.success("Your lesson has been rescheduled successfully");
       router.push("/Booking");
       return;
@@ -266,13 +270,21 @@ const RescheduleP = () => {
               </div>
             </div>
             <div className="flex  mt-10 justify-center">
-              <button
-                onClick={handleSubmit}
-                className="text-xl font-medium px-14 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300"
-              >
-                <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                Reschedule
-              </button>
+             {btnLoader==true?(
+               <button
+              //  onClick={handleSubmit}
+               className="text-xl cursor-not-allowed font-medium w-56 h-12 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300"
+             >
+               <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+               <ClipLoader className="mt-1" color="white" size={28} />{" "}
+             </button>
+             ): <button
+             onClick={handleSubmit}
+             className="text-xl font-medium w-56 h-12 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300"
+           >
+             <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+             Reschedule
+           </button>}
             </div>
           </div>
         </div>

@@ -1,48 +1,34 @@
-import * as AWS from "aws-sdk";
-
-const awsConfig = {
-  accessKeyId: process.env.ACCESS_KEY_ID,
-  secretAccessKey: process.env.SECRET_ACCESS_KEY,
-  region: process.env.REGION,
-};
-const SES = new AWS.SES(awsConfig);
-
+import sgMail from '@sendgrid/mail';
+sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API);
 
 const sendEmail = async (req, res) => {
   try {
-    const params = {
-      Source: "hindipunjabitutor@gmail.com",
-      Destination: {
-        ToAddresses: [req.body.email],
-      },
-      Message: {
-        Subject: {
-          Charset: "UTF-8",
-          Data: "Student enquiry",
-        },
-        Body: {
-          Html: {
-            Charset: "UTF-8",
-            Data: `
-                <h1>Student enquiry</h1>
-                <ul>
-                  <li>Name: ${req.body.name}</li>
-                  <li>Student email: ${req.body.email}</li>
-                  <li>Phone: ${req.body.phone}</li>
-                </ul>
-                <p>
-                 Message: ${req.body.message}
-                </p>
-                <p>Best regards,</p>
-                <p>Punjabi School</p>`,
-          },
-        },
-      },
+    const msg = {
+      to: "karanhanju9696@gmail.com", // Change to your recipient
+      from: "hindipunjabitutor@gmail.com", // Change to your verified sender
+      subject: "Student Enquiry",
+      html: `<h1>Student enquiry</h1>
+      <ul>
+        <li>Name: ${req.body.name}</li>
+        <li>Student email: ${req.body.email}</li>
+        <li>Phone: ${req.body.phone}</li>
+      </ul>
+      <p>
+       Message: ${req.body.message}
+      </p>
+      <p>Best regards,</p>
+      <p>Punjabi School</p>`,
     };
-    const sentEmail = await SES.sendEmail(params).promise();
-    res.status(200).json({message:"success",sentEmail});
+    await sgMail
+      .send(msg)
+      .then(() => {
+        res.status(200).json({ status: "Ok" });
+      })
+      .catch((error) => {
+        res.status(500).json({ error: error.message });
+      });
   } catch (err) {
-    res.status(400).json({message:"somethod error",err});
+    res.status(400).json({ message: "somethod error", err });
   }
 };
 

@@ -25,7 +25,6 @@ export default function Booking() {
       BuyLessonPack();
     }
   }, [email,amount,name]);
- 
   const BuyLessonPack = async () => {
     const res = await fetch("/api/LessonPack/addLessonPack", {
       method: "POST",
