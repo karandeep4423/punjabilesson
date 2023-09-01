@@ -13,7 +13,7 @@ const Navbar = () => {
       <nav className=" flex justify-between h-20 px-4 xl:px-0 max-w-screen-xl m-auto     ">
         <Link href="/">
           <div className="my-5 text-2xl font-medium h-fit w-[180px] border-4 px-0 text-center border-black">
-            <h1>Punjabi School</h1>
+            <h1>Punjabi Lesson</h1>
           </div>
         </Link>
         <div className="flex items-center lg:hidden">

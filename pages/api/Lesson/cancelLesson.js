@@ -16,7 +16,7 @@ const sendEmail = async (req, res) => {
       <p>We're sorry to hear that you had to cancel your lesson on ${req.body.slot}, but we understand that sometimes unexpected events can happen. We're glad that you let us know in advance, so that we can make the necessary arrangements.</p>
       <p>We hope that you will consider rescheduling your lesson at a later time when your schedule allows. We'd love to continue helping you learn and grow in your language studies.</p>
       <p>Best regards,</p>
-      <p>Punjabi School</p>`,
+      <p>Punjabi Lesson</p>`,
     };
     const sentEmail = await sgMail.send(msg);
     return (sentMailRes = sentEmail);

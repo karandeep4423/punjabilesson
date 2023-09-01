@@ -17,7 +17,7 @@ const sendEmail = async (req, res) => {
        Message: ${req.body.message}
       </p>
       <p>Best regards,</p>
-      <p>Punjabi School</p>`,
+      <p>Punjabi Lesson</p>`,
     };
     await sgMail
       .send(msg)

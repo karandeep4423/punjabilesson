@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }) {
   return (
     <div className={inter.className}>
       <Head>
-        <title>Punjabi Schoool</title>
+        <title>Punjabi Lesson</title>
         <link rel="icon"  href="/kk.png"></link>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content="Learn Punjabi and Gurbani from experienced Punjabi school tutors at an affordable price."/>

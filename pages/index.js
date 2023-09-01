@@ -44,7 +44,7 @@ const Index = () => {
   return (
     <div>
       <Head>
-        <title>Punjabi Schoool</title>
+        <title>Punjabi Lesson</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
@@ -59,7 +59,7 @@ const Index = () => {
             Learn <span className="text-sky-600">Punjabi language </span>and get
             <span className="text-pink-400"> Gurbani classes </span>
             with experienced tutors of{" "}
-            <span className="text-cyan-500">Punjabi School.</span>
+            <span className="text-cyan-500">Punjabi Lesson.</span>
           </h1>
           <h1 data-aos="fade-up" className="text-xl mt-8">
             We are a team of qualified teachers with industry-proven years of
@@ -124,7 +124,7 @@ const Index = () => {
         <div className="flex  items-center justify-center">
           <div data-aos="fade-up">
             <h1 className="text-gray-700 relative mt-12 text-center mx-3 text-5xl font-bold">
-              Why Punjabi School
+              Why Punjabi Lesson
             </h1>
           </div>
           <div className="bg-sky-400 mt-12 absolute   mix-blend-multiply filter blur-2xl h-16 w-56 "></div>
@@ -144,7 +144,7 @@ const Index = () => {
             ></Image>
             <h1 className="text-center mb-2 text-3xl font-medium">Our aim</h1>
             <p>
-              At Punjabi School, our aim is to make Punjabi language and culture
+              At Punjabi Lesson, our aim is to make Punjabi language and culture
               accessible worldwide. Our qualified teachers offer personalized
               and flexible classes to preserve our heritage and open new
               opportunities for students. Join us in our mission to keep Punjabi
@@ -190,7 +190,7 @@ const Index = () => {
               24/7 availability
             </h1>
             <p>
-              Punjabi School offers 24/7 availability for our classes, allowing
+              Punjabi Lesson offers 24/7 availability for our classes, allowing
               students and working professional to schedule and attend classes
               at their convenience from anywhere in the world. Our online
               platform is flexible and easy to use, accommodating busy schedules
@@ -213,7 +213,7 @@ const Index = () => {
               Quality material
             </h1>
             <p>
-              Our Punjabi School provides high-quality, comprehensive and
+              Our Punjabi Lesson provides high-quality, comprehensive and
               engaging learning materials including multimedia resources, study
               guides, and supplementary exercises. Our experienced teachers
               offer personalized support to help students achieve their full
@@ -236,7 +236,7 @@ const Index = () => {
               Replacement{" "}
             </h1>
             <p>
-              At Punjabi School, we offer a tutor replacement policy at no extra
+              At Punjabi Lesson, we offer a tutor replacement policy at no extra
               cost, allowing students to switch to a different tutor if they
               feel their current tutor is not the right fit. We understand the
               importance of finding the right tutor to achieve your learning
@@ -306,7 +306,7 @@ const Index = () => {
               Doubt clear session{" "}
             </h1>
             <p>
-              At Punjabi school, we understand that learning a new language or
+              At Punjabi Lesson, we understand that learning a new language or
               exploring spirituality can be challenging, and that is why we
               offer doubt-clearing sessions to our students. Our expert tutors
               provide personalised support, answering questions and clarifying
@@ -318,7 +318,7 @@ const Index = () => {
       <div className="bg-black  text-white">
         <div className="flex items-center justify-center">
           <h1 className=" relative mt-16 text-center text-5xl font-bold">
-            How Punjabi School works
+            How Punjabi Lesson works
           </h1>
           <div className="bg-sky-400 mt-16 absolute   mix-blend-multiply filter blur-2xl h-16 w-56 "></div>
         </div>
@@ -536,7 +536,7 @@ const Index = () => {
               <p className="lg:pr-4 p-4 sm:pb-10 sm:px-10 lg:p-0 lg:py-4">
                 Congratulations! You have completed the booking process and are
                 now ready to start your journey towards learning Punjabi or
-                spiritual growth with Punjabi School. It is time to get ready
+                spiritual growth with Punjabi Lesson. It is time to get ready
                 for your lesson and make the most out of your time with our
                 expert tutors.
               </p>
@@ -635,7 +635,7 @@ const Index = () => {
                     <h1>Zaryab</h1>
                     <h1 className="text-gray-600">Birmingham,UK</h1>
                     <p>
-                      Punjabi school teachers are cooperative and helpful with
+                      Punjabi Lesson teachers are cooperative and helpful with
                       myself when it comes to learning Punjabi; currently, we
                       are focusing on writing, and I am enjoying it.
                     </p>
@@ -665,7 +665,7 @@ const Index = () => {
                     <h1>Gaganpreet</h1>
                     <h1 className="text-gray-600">Sydney, Australia</h1>
                     <p>
-                      Punjabi school have good teachers. They are teaching
+                      Punjabi Lesson have good teachers. They are teaching
                       Punjabi to my son. My son likes to learn Punjabi from
                       them.
                     </p>

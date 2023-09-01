@@ -14,7 +14,7 @@ const sendEmail = async (req, res) => {
       html: `<h1>Booking Confirmed</h1>
       <p>Dear ${req.body.name}</p>
       <p>
-        Thank you for booking a lesson with Punjabi School! We're excited to have you join us for this
+        Thank you for booking a lesson with Punjabi Lesson! We're excited to have you join us for this
         lesson.
       </p>
       <p>
@@ -37,7 +37,7 @@ const sendEmail = async (req, res) => {
         a great learning experience with us!
       </p>
       <p>Best regards,</p>
-      <p>Punjabi School</p>`,
+      <p>Punjabi Lesson</p>`,
     };
     const sentEmail = await sgMail.send(msg);
     return (sentMailRes = sentEmail);

@@ -38,7 +38,7 @@ const About = () => {
         <div className="md:m-10 m-6  rounded-3xl shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)] relative   ">
           <div className="flex  items-center justify-center">
             <h1 data-aos="fade-up" className="text-gray-700 relative mx-3 mt-8 text-center text-5xl font-bold">
-              Why Punjabi School
+              Why Punjabi Lesson
             </h1>
             <div className="bg-sky-400 mt-8 absolute   mix-blend-multiply filter blur-2xl h-16 w-56 "></div>
           </div>
@@ -60,23 +60,23 @@ const About = () => {
               with family members who still reside in Punjab.
             </p>
             <p data-aos="fade-up" className=" px-4  sm:px-10 ">
-              The Punjabi School was created to provide a platform for Punjabi
+              The Punjabi Lesson was created to provide a platform for Punjabi
               migrants and their children to learn about their culture and
               language. The school offers classes on Punjabi language and
               culture, as well as religious teachings, including Gurbani and
-              Sikhism. Through its efforts, the Punjabi School aims to ensure
+              Sikhism. Through its efforts, the Punjabi Lesson aims to ensure
               that the rich cultural heritage of Punjab is not lost among its
               diaspora. The school also helps parents who live abroad and are
               looking for an organization that can teach their children about
               Punjabi culture and Sikhism.
             </p>
             <p data-aos="fade-up" className=" px-4 pb-6  sm:pb-10  sm:px-10 ">
-              In addition to serving the Punjabi community, the Punjabi School
+              In addition to serving the Punjabi community, the Punjabi Lesson
               welcomes anyone who is interested in learning about Punjabi
               culture and Sikhism. Regardless of their background or level of
-              familiarity with the culture, the school is open to everyone who
+              familiarity with the culture, the Lesson is open to everyone who
               wants to learn and connect with the community. Through its
-              efforts, the Punjabi School aims to keep the Punjabi culture and
+              efforts, the Punjabi Lesson aims to keep the Punjabi culture and
               language alive and thriving, while also creating a sense of
               community among those who share these traditions.
             </p>
@@ -96,7 +96,7 @@ const About = () => {
           </div>
           <div className="text-lg xl:text-xl flex flex-col gap-4 items-center justify-center">
           <p data-aos="fade-up" className=" px-4  sm:px-10 pt-5">
-            At Punjabi School, we are proud to have a team of dedicated
+            At Punjabi Lesson, we are proud to have a team of dedicated
             professionals who are committed to providing high-quality Punjabi
             language and spiritual classes online. Our team is composed of
             experienced educators and spiritual leaders who bring a wealth of
@@ -119,7 +119,7 @@ const About = () => {
             games, videos, and group discussions, to keep our classes fun and
             engaging. We also prioritize creating a supportive and inclusive
             learning environment, where all students feel welcomed and valued.
-            Thank you for considering Punjabi School for your language and
+            Thank you for considering Punjabi Lesson for your language and
             spiritual education needs. We look forward to working with you!
           </p>
           </div>

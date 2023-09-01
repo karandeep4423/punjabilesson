@@ -27,7 +27,7 @@ const Gurbani = () => {
             </span>
             into
             <span className="text-pink-400"> English and Punjabi </span>
-            with <span className="text-cyan-500">Punjabi School.</span>
+            with <span className="text-cyan-500">Punjabi Lesson.</span>
           </h1>
           <h1 data-aos="fade-up" className="text-xl mt-8">
             We are a team of Gursikh teachers who have a strong commitment to

@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="flex flex-col space-y-4 pt-10 w-64">
             <h1 className="text-white font-medium text-xl border-4 border-white w-fit px-1">
               {" "}
-              Punjabi School
+              Punjabi Lesson
             </h1>
             <p className="text-gray-300 font-medium">
             We are a team of qualified teachers with industry-proven years of

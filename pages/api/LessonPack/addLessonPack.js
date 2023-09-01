@@ -18,7 +18,7 @@ const sendEmail = async (req, res) => {
       <p>If you have any questions or concerns about your pack of five hour lessons, please don't hesitate to get in touch with us at [Your Contact Information]. We're here to help.</p>
       <p>We're looking forward to helping you achieve your language goals and hope that you enjoy your pack of five hour lessons.</p>
       <p>Best regards,</p>
-      <p>Punjabi School</p>`,
+      <p>Punjabi Lesson</p>`,
     };
     const sentEmail = await sgMail.send(msg);
     return (sentMailRes = sentEmail);

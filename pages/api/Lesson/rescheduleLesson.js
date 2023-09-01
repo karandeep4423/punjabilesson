@@ -17,7 +17,7 @@ const sendEmail = async (req, res) => {
       <p>If you have any questions or concerns about this rescheduled lesson, please don't hesitate to get in touch with us at bachiwind3@gmail.com . We're here to help.</p>
       <p>We're looking forward to seeing you at your rescheduled lesson and hope that you continue to have a great learning experience with us.</p>
       <p>Best regards,</p>
-      <p>Punjabi School</p>`,
+      <p>Punjabi Lesson</p>`,
     };
     const sentEmail = await sgMail.send(msg);
     return (sentMailRes = sentEmail);

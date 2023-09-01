@@ -36,7 +36,6 @@ const Checkout = () => {
       }),
     });
     const result = await res.json();
-    console.log("reposne",result)
     if (result.message == "success") {
       setEmail("");
       setName("");
@@ -69,38 +68,36 @@ const Checkout = () => {
     setSlotTimezone(router.query.timezone);
     setLessonType(router.query.lesson);
     setPackId(router.query.packId);
-    const BookLessonPaypal = async () => {
-      const res = await fetch("/api/Lesson/addLessons", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          name: name,
-          message: message,
-          slot: slot,
-          slotTimezone: slotTimezone,
-          lessonType: lessonType,
-        }),
-      });
-      const result = await res.json();
-      console.log("reposne",result)
-
-      if (result.message == "success") {
-        setEmail("");
-        setName("");
-        setMessage("");
-        router.push("/Booking");
-        toast.success("Your lesson has been booked successfully");
-        return;
-      } else {
-        toast.error("Server error, Try again");
-      }
-    };
     transactionId && BookLessonPaypal();
   }, [transactionId,router.query.schdule,router.query.timezone,router.query.lesson,router.query.packId]);
 
+  const BookLessonPaypal = async () => {
+    const res = await fetch("/api/Lesson/addLessons", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        name: name,
+        message: message,
+        slot: slot,
+        slotTimezone: slotTimezone,
+        lessonType: lessonType,
+      }),
+    });
+    const result = await res.json();
+    if (result.message == "success") {
+      setEmail("");
+      setName("");
+      setMessage("");
+      router.push("/Booking");
+      toast.success("Your lesson has been booked successfully");
+      return;
+    } else {
+      toast.error("Server error, Try again");
+    }
+  };
   const PayPal = (e) => {
     e.preventDefault();
     MySwal.fire({
