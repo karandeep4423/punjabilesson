@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import Image from "next/image";
+import Head from "next/head";
 const Checkout = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -42,7 +43,7 @@ const Checkout = () => {
       setMessage("");
       updatePackWithBookedLesson(result?.lessons._id);
       toast.success("Your lesson has been booked successfully");
-      router.push("/book-your-lesson");
+      router.push("/choose-your-lesson");
       return;
     } else {
       toast.error("Server error, Try again");
@@ -91,7 +92,7 @@ const Checkout = () => {
       setEmail("");
       setName("");
       setMessage("");
-      router.push("/book-your-lesson");
+      router.push("/choose-your-lesson");
       toast.success("Your lesson has been booked successfully");
       return;
     } else {
@@ -137,6 +138,14 @@ const Checkout = () => {
 
   return (
     <div>
+      <Head>
+        <title>Checkout - Complete Your Lesson Reservation</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Securely complete your lesson reservation at our checkout. Review your order, provide your payment details, and confirm your booking."
+        />
+      </Head>
       <div className="m-auto max-w-screen-xl">
         <div className="flex items-center justify-center">
           <h1 className=" relative text-center mt-14 text-5xl font-bold">

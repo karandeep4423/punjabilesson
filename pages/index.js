@@ -73,7 +73,7 @@ const Index = () => {
             className="w-[2000px] h-[500px]"
             width={1000}
             height={1000}
-            alt=""
+            alt="learn punjabi language"
           ></Image>
         </div>
       </div>
@@ -627,7 +627,7 @@ const Index = () => {
                       className="w-full h-full rounded-full shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)] "
                       width={300}
                       height={300}
-                      alt=""
+                      alt="punjabi language class"
                       src="/homePage/feedbackImg1.jpeg"
                     ></Image>
                   </div>
@@ -657,7 +657,7 @@ const Index = () => {
                       className="w-full h-full rounded-full shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)] "
                       width={300}
                       height={300}
-                      alt=""
+                      alt="punjabi language lesson"
                       src="/homePage/feedbackImg2.jpg"
                     ></Image>
                   </div>
@@ -687,7 +687,7 @@ const Index = () => {
                       className="w-full h-full rounded-full shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)] "
                       width={300}
                       height={300}
-                      alt=""
+                      alt="punjabi language course"
                       src="/homePage/DefaultImg.png"
                     ></Image>
                   </div>

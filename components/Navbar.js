@@ -26,7 +26,7 @@ const Navbar = () => {
         >
           <Link onClick={handleShow} href="/">Home</Link>
           <Link onClick={handleShow} href="/gurbani-in-english">Gurbani Lesson</Link>
-          <Link onClick={handleShow} href="/book-your-lesson">Book Lesson</Link>
+          <Link onClick={handleShow} href="/choose-your-lesson">Book Lesson</Link>
           <Link onClick={handleShow} href="/about-us">About us</Link>
           <Link onClick={handleShow} href="/contact-us">Contact us</Link>
           <div className="hidden lg:flex space-x-3">

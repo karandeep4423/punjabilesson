@@ -12,13 +12,12 @@ export default function App({ Component, pageProps }) {
     <div className={inter.className}>
       <ToastContainer autoClose={false} />
       <Head>
-        <title>Punjabi Lesson</title>
         <link rel="icon" href="/kk.png"></link>
+        <title>Get in Touch with Punjabi Lesson - Contact Us.</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="Learn Punjabi and Gurbani from experienced Punjabi school tutors at an affordable price."
-        />
+          content="Contact Punjabi Lesson for questions, support, or inquiries. We're here to assist you with your Punjabi language and Gurbani learning needs."/>
       </Head>
       <Navbar />
       <Component {...pageProps} />

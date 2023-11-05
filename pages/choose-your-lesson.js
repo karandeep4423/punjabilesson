@@ -6,6 +6,7 @@ import AOS from "aos";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import "aos/dist/aos.css";
 import Swal from "sweetalert2";
+import Head from "next/head";
 import withReactContent from "sweetalert2-react-content";
 export default function Booking() {
   const MySwal = withReactContent(Swal);
@@ -21,10 +22,10 @@ export default function Booking() {
       delay: 100,
       once: true,
     });
-    if(email&&amount&&name){
+    if (email && amount && name) {
       BuyLessonPack();
     }
-  }, [email,amount,name]);
+  }, [email, amount, name]);
   const BuyLessonPack = async () => {
     const res = await fetch("/api/LessonPack/addLessonPack", {
       method: "POST",
@@ -86,6 +87,14 @@ export default function Booking() {
 
   return (
     <div>
+      <Head>
+        <title>Choose your lesson - Punjabi Lesson.</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Choose your lesson with Punjabi Lesson. Choose your preferred  lesson type to get started on your learning journey."
+        />
+      </Head>
       <div className="my-12">
         <h1 className="text-5xl mx-4 text-gray-700 font-bold text-center">
           Choose your plan

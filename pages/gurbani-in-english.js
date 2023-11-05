@@ -49,7 +49,7 @@ const Gurbani = () => {
             className="w-[2000px] h-[500px]"
             width={1000}
             height={1000}
-            alt="hero-section"
+            alt="gurbani in english"
           ></Image>
         </div>
       </div>
@@ -106,7 +106,7 @@ const Gurbani = () => {
               src="/khanda.svg"
               height={110}
               width={110}
-              alt=""
+              alt="gurbani meaning "
             ></Image>
             <h3 className="text-center text-3xl font-medium">Japji Sahib</h3>
             <p className="mt-3">
@@ -116,7 +116,7 @@ const Gurbani = () => {
               part of daily Sikh prayer and meditation. The hymn explores the
               nature of the divine and the path to spiritual liberation.
             </p>
-            <Link href="/book-your-lesson">
+            <Link href="/choose-your-lesson">
               <button className="mt-3 font-medium px-16 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">
                 <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                 Get Started
@@ -132,7 +132,7 @@ const Gurbani = () => {
               src="/khanda.svg"
               height={110}
               width={110}
-              alt=""
+              alt="gurbani meaning "
             ></Image>
             <h3 className="text-center text-3xl font-medium">Chaupai Sahib</h3>
             <p className="mt-3">
@@ -142,7 +142,7 @@ const Gurbani = () => {
               hymn is meant to provide protection and strength to the devotee
               and to remind them of the power and mercy of the divine.
             </p>
-            <Link href="/book-your-lesson">
+            <Link href="/choose-your-lesson">
               <button className="mt-3 font-medium px-16 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">
                 <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                 Get Started
@@ -158,7 +158,7 @@ const Gurbani = () => {
               src="/khanda.svg"
               height={110}
               width={110}
-              alt=""
+              alt="gurbani meaning "
             ></Image>
             <h3 className="text-center text-3xl font-medium">Rehraas Sahib</h3>
             <p className="mt-3">
@@ -169,7 +169,7 @@ const Gurbani = () => {
               The prayer also encourages Sikhs to live a life of spiritual
               discipline and righteousness.
             </p>
-            <Link href="/book-your-lesson">
+            <Link href="/choose-your-lesson">
               <button className="mt-3 font-medium px-16 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">
                 <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                 Get Started
@@ -185,7 +185,7 @@ const Gurbani = () => {
               src="/khanda.svg"
               height={110}
               width={110}
-              alt=""
+              alt="gurbani meaning "
             ></Image>
             <h3 className="text-center text-3xl font-medium">Anand Sahib</h3>
             <p className="mt-3">
@@ -196,7 +196,7 @@ const Gurbani = () => {
               encourages Sikhs to live a life of spiritual devotion and service
               to others.
             </p>
-            <Link href="/book-your-lesson">
+            <Link href="/choose-your-lesson">
               <button className="mt-3 font-medium px-16 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">
                 <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                 Get Started
@@ -212,7 +212,7 @@ const Gurbani = () => {
               src="/khanda.svg"
               height={110}
               width={110}
-              alt=""
+              alt="gurbani meaning "
             ></Image>
             <h3 className="text-center text-3xl font-medium">Kirtan Sohila</h3>
             <p className="mt-3">
@@ -223,7 +223,7 @@ const Gurbani = () => {
               before sleeping. The prayer also emphasizes the importance of
               spiritual devotion and meditation.
             </p>
-            <Link href="/book-your-lesson">
+            <Link href="/choose-your-lesson">
               <button className="mt-3 font-medium px-16 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">
                 <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                 Get Started
@@ -239,7 +239,7 @@ const Gurbani = () => {
               src="/khanda.svg"
               height={110}
               width={110}
-              alt=""
+              alt="gurbani meaning "
             ></Image>
             <h3 className="text-center text-3xl font-medium">Jaap Sahib</h3>
             <p className="mt-3">
@@ -250,7 +250,7 @@ const Gurbani = () => {
               spiritual discipline and meditation in achieving a state of
               blissful union with the divine.
             </p>
-            <Link href="/book-your-lesson">
+            <Link href="/choose-your-lesson">
               <button className="mt-3 font-medium px-16 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">
                 <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                 Get Started
@@ -266,7 +266,7 @@ const Gurbani = () => {
               src="/khanda.svg"
               height={110}
               width={110}
-              alt=""
+              alt="gurbani meaning "
             ></Image>
             <h3 className="text-center text-3xl font-medium">Sukhmani Sahib</h3>
             <p className="mt-3">
@@ -277,7 +277,7 @@ const Gurbani = () => {
               spiritual devotion and meditation in achieving a state of inner
               peace and happiness.
             </p>
-            <Link href="/book-your-lesson">
+            <Link href="/choose-your-lesson">
               <button className="mt-3 font-medium px-16 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">
                 <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                 Get Started
