@@ -2,6 +2,7 @@ import React,{useEffect} from "react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Head from "next/head";
 const About = () => {
     useEffect(() => {
       AOS.init({
@@ -14,6 +15,13 @@ const About = () => {
     }, []);
   return (
     <div>
+      <Head>
+        <title>Discover Our Story About - Punjabi Lessson.</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Learn about Punjabi Lesson - our mission, values, and the team behind our Punjabi language and Gurbani lessons."/>
+      </Head>
       <div className="relative max-w-screen-xl m-auto w-full h-fit  flex flex-col md:flex-row px-10 items-center  ">
         <div className="absolute mix-blend-multiply w-11/12 h-96 sm:left-10 top-28 bg-gradient-to-r from-blue-300 via-purple-300  to-yellow-200 filter blur-3xl transform translate-y-2 scale-y-75 skew-y-12 ">
           {" "}
@@ -37,9 +45,9 @@ const About = () => {
       <div className="max-w-screen-xl m-auto">
         <div className="md:m-10 m-6  rounded-3xl shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)] relative   ">
           <div className="flex  items-center justify-center">
-            <h1 data-aos="fade-up" className="text-gray-700 relative mx-3 mt-8 text-center text-5xl font-bold">
+            <h2 data-aos="fade-up" className="text-gray-700 relative mx-3 mt-8 text-center text-5xl font-bold">
               Why Punjabi Lesson
-            </h1>
+            </h2>
             <div className="bg-sky-400 mt-8 absolute   mix-blend-multiply filter blur-2xl h-16 w-56 "></div>
           </div>
           <div className="absolute mix-blend-multiply w-11/12 h-5/6 left-10 top-28 bg-gradient-to-r from-blue-200 via-purple-200  to-yellow-100 filter blur-3xl transform translate-y-2 scale-y-75 skew-y-12 ">
@@ -86,9 +94,9 @@ const About = () => {
       <div className="max-w-screen-xl m-auto">
         <div className="md:mx-10 mx-6 my-16 rounded-3xl shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)] relative   ">
           <div className="flex  items-center justify-center">
-            <h1 data-aos="fade-up" className=" text-gray-700 relative mx-3 mt-8 text-center text-5xl font-bold">
+            <h2 data-aos="fade-up" className=" text-gray-700 relative mx-3 mt-8 text-center text-5xl font-bold">
               Our Team
-            </h1>
+            </h2>
             <div className="bg-sky-400 mt-8 absolute   mix-blend-multiply filter blur-2xl h-16 w-56 "></div>
           </div>
           <div className="absolute mix-blend-multiply w-11/12 h-5/6 left-10 top-28 bg-gradient-to-r from-blue-200 via-purple-200  to-yellow-100 filter blur-3xl transform translate-y-2 scale-y-75 skew-y-12 ">

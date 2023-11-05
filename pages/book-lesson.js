@@ -220,7 +220,7 @@ const Book_lesson = () => {
             </div>
           </div>
           <div className="flex  mt-10 justify-center">
-            <Link href={{ pathname:'/Checkout', query:{packId:router.query.packId,lesson:router.query.lesson,schdule:format(selectedSlot,"EEEE, MMMM d HH:mm zzz "),timezone:selectedOption},}}>
+            <Link href={{ pathname:'/checkout', query:{packId:router.query.packId,lesson:router.query.lesson,schdule:format(selectedSlot,"EEEE, MMMM d HH:mm zzz "),timezone:selectedOption},}}>
               <button className="text-xl font-medium px-14 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">
                 <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                 Checkout

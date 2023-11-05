@@ -18,18 +18,18 @@ const Footer = () => {
           </div>
           <div className="flex flex-col text-gray-300 font-medium space-y-4 pt-10">
             <h1 className="text-xl font-medium text-white">Navigation</h1>
-            <Link href="/index">Home</Link>
-            <Link href="/Booking">Book Lesson</Link>
-            <Link href="/Gurbani">Gurbani Lesson</Link>
-            <Link href="/About">About us</Link>
-            <Link href="/Contact">Contact us</Link>
+            <Link href="/">Home</Link>
+            <Link href="/book-your-lesson">Book Lesson</Link>
+            <Link href="/gurbani-in-english">Gurbani Lesson</Link>
+            <Link href="/about-us">About us</Link>
+            <Link href="/contact-us">Contact us</Link>
           </div>
           <div className="flex flex-col text-gray-300 font-medium space-y-4 pt-10">
             <h1 className="text-xl font-medium text-white">Services</h1>
-            <Link href="/Booking#book_lesson">Book a Lesson</Link>
-            <Link href="/Booking#Group_class">Group Class</Link>
-            <Link href="/Booking#Buy_hours">Buy Hours Pack</Link>
-            <Link href="/Booking#subscription">Get Subscription</Link>
+            <Link href="/book-your-lesson#book-lesson">Book a Lesson</Link>
+            <Link href="/book-your-lesson#group-class">Group Class</Link>
+            <Link href="/book-your-lesson#buy-hours">Buy Hours Pack</Link>
+            <Link href="/book-your-lesson#subscription">Get Subscription</Link>
           </div>
           <div className="flex flex-col text-gray-300 font-medium space-y-4 pt-10">
             <h1 className="text-xl text-white font-medium">Contact us</h1>

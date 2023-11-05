@@ -42,7 +42,7 @@ const Checkout = () => {
       setMessage("");
       updatePackWithBookedLesson(result?.lessons._id);
       toast.success("Your lesson has been booked successfully");
-      router.push("/Booking");
+      router.push("/book-your-lesson");
       return;
     } else {
       toast.error("Server error, Try again");
@@ -91,7 +91,7 @@ const Checkout = () => {
       setEmail("");
       setName("");
       setMessage("");
-      router.push("/Booking");
+      router.push("/book-your-lesson");
       toast.success("Your lesson has been booked successfully");
       return;
     } else {
@@ -150,10 +150,10 @@ const Checkout = () => {
         >
           <div className="flex gap-3 ml-1 mt-3 mb-3 md:mt-0 justify-center  items-center text-xl ">
             <Image className="w-12 h-12" width={20} height={20} alt="checkout" src="/checkout.png"></Image>
-            <h1>
+            <h2>
               {router.query.schdule}
               {router.query.timezone}
-            </h1>
+            </h2>
           </div>
           <div data-aos="fade-up" className="flex pt-3  gap-2">
             <Player

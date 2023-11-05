@@ -107,7 +107,7 @@ const RescheduleP = () => {
     if (result.message == "success") {
       setBtnLoader(false);
       toast.success("Your lesson has been rescheduled successfully");
-      router.push("/Booking");
+      router.push("/book-your-lesson");
       return;
     } else {
       toast.error("Server error, Try again");
@@ -125,12 +125,12 @@ const RescheduleP = () => {
           <div className="bg-sky-400 z-50 mt-10 absolute   mix-blend-multiply filter blur-2xl h-16 w-56 "></div>
         </div>
         <div  className="shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)] sm:mx-14 md:mx-20 lg:mx-24 mx-6  p-4  md:px-10 lg:px-16  rounded-xl   my-8 ">
-            <h1 className="text-center text-xl font-bold">Lesson details</h1>
+            <h2 className="text-center text-xl font-bold">Lesson details</h2>
             <div data-aos="fade-up" className="rounded-2xl grid break-words mt-4  grid-cols-1 sm:grid-cols-2  justify-center  items-center gap-4 text-lg">
-              <h1><span className="font-bold">Email: </span>{resData?.lesson.email}</h1>
-              <h1><span className="font-bold">Name: </span>{resData?.lesson.name}</h1>
-              <h1><span className="font-bold">Timezone: </span>{resData?.lesson.slotTimezone}</h1>
-              <h1><span className="font-bold">Slot: </span>{resData?.lesson.slot}</h1>
+              <p><span className="font-bold">Email: </span>{resData?.lesson.email}</p>
+              <p><span className="font-bold">Name: </span>{resData?.lesson.name}</p>
+              <p><span className="font-bold">Timezone: </span>{resData?.lesson.slotTimezone}</p>
+              <p><span className="font-bold">Slot: </span>{resData?.lesson.slot}</p>
             </div>
         </div>
         <div className="md:mx-10 mx-6 p-4 md:p-8  mb-16 mt-10  h-5/6 mix-blend-multiply   bg-gradient-to-r from-blue-100 via-purple-100  to-yellow-50   rounded-3xl filter  shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(2,139,199,0.5)] ">
@@ -272,7 +272,6 @@ const RescheduleP = () => {
             <div className="flex  mt-10 justify-center">
              {btnLoader==true?(
                <button
-              //  onClick={handleSubmit}
                className="text-xl cursor-not-allowed font-medium w-56 h-12 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300"
              >
                <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>

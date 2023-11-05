@@ -25,10 +25,10 @@ const Navbar = () => {
           }`}
         >
           <Link onClick={handleShow} href="/">Home</Link>
-          <Link onClick={handleShow} href="/Gurbani">Gurbani Lesson</Link>
-          <Link onClick={handleShow} href="/Booking">Book Lesson</Link>
-          <Link onClick={handleShow} href="/About">About us</Link>
-          <Link onClick={handleShow} href="/Contact">Contact us</Link>
+          <Link onClick={handleShow} href="/gurbani-in-english">Gurbani Lesson</Link>
+          <Link onClick={handleShow} href="/book-your-lesson">Book Lesson</Link>
+          <Link onClick={handleShow} href="/about-us">About us</Link>
+          <Link onClick={handleShow} href="/contact-us">Contact us</Link>
           <div className="hidden lg:flex space-x-3">
             <Link href="/Booking">
               <button className=" font-medium px-4 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">

@@ -4,6 +4,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { toast } from "react-toastify";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Head from "next/head";
 const Contact = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -53,6 +54,13 @@ const Contact = () => {
   };
   return (
     <div>
+      <Head>
+        <title>Get in Touch with Punjabi Lesson - Contact Information.</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="Contact Punjabi Lesson for questions, support, or inquiries. We're here to assist you with your Punjabi language and Gurbani learning needs."/>
+      </Head>
       <div className="m-auto max-w-screen-xl">
         <div className="flex items-center justify-center">
           <h1 className="text-gray-700 relative text-center mt-14 text-5xl font-bold">

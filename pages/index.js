@@ -10,7 +10,7 @@ import { Pagination, Navigation } from "swiper";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css";
-import Contact from "./Contact";
+import Contact from "./contact-us";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -44,11 +44,11 @@ const Index = () => {
   return (
     <div>
       <Head>
-        <title>Punjabi Lesson</title>
+        <title>Learn Punjabi Language & Gurbani in English - Punjabi Lesson</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="Learn Punjabi and Gurbani from experienced Punjabi school tutors at an affordable price."/>
+          content="Discover the best way to learn Punjabi language and Gurbani in English. Join our experienced tutors for affordable Punjabi language classes and lessons."/>
       </Head>
       <div className="relative max-w-screen-xl m-auto   w-full h-fit  flex flex-col md:flex-row px-10 items-center  ">
         <div className="absolute sm:left-10 mix-blend-multiply w-11/12 h-96  top-28 bg-gradient-to-r from-blue-300 via-purple-300  to-yellow-200 filter blur-3xl transform translate-y-2 scale-y-75 skew-y-12 ">
@@ -57,15 +57,15 @@ const Index = () => {
         <div>
           <h1 className="text-5xl text-gray-700 text-center font-bold">
             Learn <span className="text-sky-600">Punjabi language </span>and get
-            <span className="text-pink-400"> Gurbani classes </span>
+            <span className="text-pink-400"> Gurbani Classes of </span>
             with experienced tutors of{" "}
             <span className="text-cyan-500">Punjabi Lesson.</span>
           </h1>
-          <h1 data-aos="fade-up" className="text-xl mt-8">
+          <p data-aos="fade-up" className="text-xl mt-8">
             We are a team of qualified teachers with industry-proven years of
             experience. Book a class according to your availability to open new
             door of language.
-          </h1>
+          </p>
         </div>
         <div>
           <Image
@@ -81,9 +81,9 @@ const Index = () => {
         <div className="md:m-10 m-6  rounded-3xl shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)] relative   ">
           <div className="flex  items-center justify-center">
             <div data-aos="fade-up">
-              <h1 className=" relative text-gray-700 mt-8 text-center text-5xl font-bold">
+              <h2 className=" relative text-gray-700 mt-8 text-center text-5xl font-bold">
                 About us
-              </h1>
+              </h2>
             </div>
             <div className="bg-sky-400 mt-8 absolute   mix-blend-multiply filter blur-2xl h-16 w-56 "></div>
           </div>
@@ -123,9 +123,9 @@ const Index = () => {
       <div className="relative max-w-screen-xl m-auto">
         <div className="flex  items-center justify-center">
           <div data-aos="fade-up">
-            <h1 className="text-gray-700 relative mt-12 text-center mx-3 text-5xl font-bold">
+            <h2 className="text-gray-700 relative mt-12 text-center mx-3 text-5xl font-bold">
               Why Punjabi Lesson
-            </h1>
+            </h2>
           </div>
           <div className="bg-sky-400 mt-12 absolute   mix-blend-multiply filter blur-2xl h-16 w-56 "></div>
         </div>
@@ -142,7 +142,7 @@ const Index = () => {
               width={110}
               alt=""
             ></Image>
-            <h1 className="text-center mb-2 text-3xl font-medium">Our aim</h1>
+            <h3 className="text-center mb-2 text-3xl font-medium">Our aim</h3>
             <p>
               At Punjabi Lesson, our aim is to make Punjabi language and culture
               accessible worldwide. Our qualified teachers offer personalized
@@ -163,9 +163,9 @@ const Index = () => {
               width={110}
               alt=""
             ></Image>
-            <h1 className="text-center mb-2 text-3xl font-medium">
+            <h3 className="text-center mb-2 text-3xl font-medium">
               Budget friendly
-            </h1>
+            </h3>
             <p>
               We understand that learning a new language can be expensive, which
               is why we strive to keep our classes affordable and accessible to
@@ -186,9 +186,9 @@ const Index = () => {
               width={110}
               alt=""
             ></Image>
-            <h1 className="text-center mb-2 text-3xl font-medium">
+            <h3 className="text-center mb-2 text-3xl font-medium">
               24/7 availability
-            </h1>
+            </h3>
             <p>
               Punjabi Lesson offers 24/7 availability for our classes, allowing
               students and working professional to schedule and attend classes
@@ -209,9 +209,9 @@ const Index = () => {
               width={110}
               alt=""
             ></Image>
-            <h1 className="text-center mb-2 text-3xl font-medium">
+            <h3 className="text-center mb-2 text-3xl font-medium">
               Quality material
-            </h1>
+            </h3>
             <p>
               Our Punjabi Lesson provides high-quality, comprehensive and
               engaging learning materials including multimedia resources, study
@@ -232,9 +232,9 @@ const Index = () => {
               width={110}
               alt=""
             ></Image>
-            <h1 className="text-center mb-2 text-3xl font-medium">
+            <h3 className="text-center mb-2 text-3xl font-medium">
               Replacement{" "}
-            </h1>
+            </h3>
             <p>
               At Punjabi Lesson, we offer a tutor replacement policy at no extra
               cost, allowing students to switch to a different tutor if they
@@ -255,9 +255,9 @@ const Index = () => {
               width={140}
               alt=""
             ></Image>
-            <h1 className="text-center mb-2 text-3xl font-medium">
+            <h3 className="text-center mb-2 text-3xl font-medium">
               Expert team
-            </h1>
+            </h3>
             <p>
               We are proud to have a team of expert tutors who are native
               Punjabi speakers and passionate about teaching Punjabi language
@@ -278,9 +278,9 @@ const Index = () => {
               width={140}
               alt=""
             ></Image>
-            <h1 className="text-center mb-2 text-3xl font-medium">
+            <h3 className="text-center mb-2 text-3xl font-medium">
               Track progress{" "}
-            </h1>
+            </h3>
             <p>
               Tracking student progress is essential to ensuring that our
               students make progress in their language and spiritual learning
@@ -302,9 +302,9 @@ const Index = () => {
               width={220}
               alt=""
             ></Image>
-            <h1 className="text-center mb-2 text-3xl font-medium">
+            <h3 className="text-center mb-2 text-3xl font-medium">
               Doubt clear session{" "}
-            </h1>
+            </h3>
             <p>
               At Punjabi Lesson, we understand that learning a new language or
               exploring spirituality can be challenging, and that is why we
@@ -317,9 +317,9 @@ const Index = () => {
       </div>
       <div className="bg-black  text-white">
         <div className="flex items-center justify-center">
-          <h1 className=" relative mt-16 text-center text-5xl font-bold">
+          <h2 className=" relative mt-16 text-center text-5xl font-bold">
             How Punjabi Lesson works
-          </h1>
+          </h2>
           <div className="bg-sky-400 mt-16 absolute   mix-blend-multiply filter blur-2xl h-16 w-56 "></div>
         </div>
         <div className="flex text-lg xl:text-xl max-w-screen-xl m-auto  justify-center items-center mt-10 flex-col">
@@ -345,9 +345,9 @@ const Index = () => {
               alt="join school"
             ></Image>
             <div>
-              <h1 className="text-3xl px-3 text-center font-bold">
+              <h3 className="text-3xl px-3 text-center font-bold">
                 Choose Your Availability
-              </h1>
+              </h3>
               <p className="lg:pr-4 p-4 sm:pb-10 sm:px-10 lg:p-0 lg:py-4">
                 The first step to joining our Punjabi language or spiritual
                 classes is to choose your availability. Simply choose the times
@@ -391,9 +391,9 @@ const Index = () => {
               alt="join school"
             ></Image>
             <div>
-              <h1 className="text-3xl  text-center font-bold">
+              <h3 className="text-3xl  text-center font-bold">
                 Lock Your Hours
-              </h1>
+              </h3>
               <p className="lg:pr-4 p-4 sm:pb-10 sm:px-10 lg:p-0 lg:py-4">
                 After you have chosen your availability for classes, the next
                 step in our process is to lock in your hours. This is an
@@ -438,7 +438,7 @@ const Index = () => {
               alt="join school"
             ></Image>
             <div>
-              <h1 className="text-3xl  text-center font-bold">Pay For Hours</h1>
+              <h3 className="text-3xl  text-center font-bold">Pay For Hours</h3>
               <p className="lg:pr-4 p-4 sm:pb-10 sm:px-10 lg:p-0 lg:py-4">
                 Once you have locked in your hours, it is time to pay for your
                 selected lessons. We understand that online payments can be a
@@ -483,9 +483,9 @@ const Index = () => {
               alt="join school"
             ></Image>
             <div>
-              <h1 className="text-3xl text-center font-bold">
+              <h3 className="text-3xl text-center font-bold">
                 Get Confirmation
-              </h1>
+              </h3>
               <p className="lg:pr-4 p-4 sm:pb-10 sm:px-10 lg:p-0 lg:py-4">
                 Once your money has been received, we will send you a
                 confirmation email. This email verifies the time and day of your
@@ -530,9 +530,9 @@ const Index = () => {
               alt="join school"
             ></Image>
             <div>
-              <h1 className="text-3xl px-3 text-center font-bold">
+              <h3 className="text-3xl px-3 text-center font-bold">
                 Get ready for lesson
-              </h1>
+              </h3>
               <p className="lg:pr-4 p-4 sm:pb-10 sm:px-10 lg:p-0 lg:py-4">
                 Congratulations! You have completed the booking process and are
                 now ready to start your journey towards learning Punjabi or
@@ -547,9 +547,9 @@ const Index = () => {
       <div className="max-w-screen-xl m-auto">
         <div className="flex items-center justify-center">
           <div data-aos="fade-up">
-            <h1 className=" relative text-gray-700 text-center mx-3 mt-16 text-5xl font-bold">
+            <h2 className=" relative text-gray-700 text-center mx-3 mt-16 text-5xl font-bold">
               What our students say
-            </h1>
+            </h2>
           </div>
           <div className="bg-sky-400 mt-16 absolute   mix-blend-multiply filter blur-2xl h-16 w-56 "></div>
         </div>
@@ -711,10 +711,10 @@ const Index = () => {
       </div>
       <div className=" flex justify-center items-center ">
         <div className="max-w-screen-xl  border-2 relative rotate-3 sm:rotate-3 flex flex-col gap-5 bg-sky-600 text-white m-3 border-white sm:m-16 p-8 md:p-16">
-          <h1 className="text-center font-bold text-5xl">
+          <h2 className="text-center font-bold text-5xl">
             {" "}
             Lets begin this journey without any further delay!
-          </h1>
+          </h2>
           <p className="px-2 font-normal text-xl">
             We guarantee satisfaction. If unhappy with first lesson, receive
             another tutor with same lesson, no questions asked.
@@ -729,13 +729,13 @@ const Index = () => {
           </div>
         </div>
         <div className="max-w-screen-xl border-2 absolute flex flex-col gap-5 bg-black text-white border-white m-3 sm:m-16 p-8 md:p-16">
-          <h1
+          <h2
             data-aos="fade-up"
             className="text-center text-gray-200 font-bold text-5xl"
           >
             {""}
             Lets begin this journey without any further delay!
-          </h1>
+          </h2>
           <p
             data-aos="fade-up"
             className="px-2 font-normal text-xl text-gray-300"

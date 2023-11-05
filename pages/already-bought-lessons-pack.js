@@ -66,30 +66,30 @@ const AlreadyBought = () => {
     {resData?.lesson.length !=0? (
       resData?.lesson.map((slot, index) => (
         <div key={index} className=" mb-16 shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)] sm:mx-14 md:mx-20 lg:mx-24 mx-6  p-4  md:px-10 lg:px-16 rounded-xl ">
-          <h1 className="text-center text-xl font-bold">Pack details</h1>
+          <h2 className="text-center text-xl font-bold">Pack details</h2>
           <div
             className="mt-4 break-words rounded-2xl grid  grid-cols-1 sm:grid-cols-2  justify-center  items-center gap-4 text-lg"
           >
-            <h1>
+            <p>
               <span className="font-bold">Email: </span>
               {slot.email}
-            </h1>
-            <h1>
+            </p>
+            <p>
               <span className="font-bold">Name: </span>
               {slot.name.firstName} {slot.name.lastName}
 
-            </h1>
-            <h1>
+            </p>
+            <p>
               <span className="font-bold">Amount: </span>
               ${slot.amount}
-            </h1>
-            <h1>
+            </p>
+            <p>
               <span className="font-bold">Attented lesson: </span>
               {slot.lessons.length}
-            </h1>
+            </p>
           </div>
           <div className="flex justify-center  items-center mt-4">
-            {slot.lessons.length == 5 ?<div className="flex  flex-col gap-2"><h1 className="text-xl font-bold">You attented your all lessons</h1> <Link
+            {slot.lessons.length == 5 ?<div className="flex  flex-col gap-2"><p className="text-xl font-bold">You attented your all lessons</p> <Link
               href={{
                 pathname: "/Booking",
               }}
@@ -115,7 +115,7 @@ const AlreadyBought = () => {
       ))
     ) : (
       <div>
-        <h1 className="text-4xl mx-4 text-center mb-16 text-black">There is no lesson pack that has been bought with this email.</h1>
+        <h2 className="text-4xl mx-4 text-center mb-16 text-black">There is no lesson pack that has been bought with this email.</h2>
       </div>
     )}
   </div>

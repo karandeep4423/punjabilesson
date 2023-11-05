@@ -164,28 +164,28 @@ const Reschedule = () => {
             key={index}
             className=" mb-16 shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)]  sm:mx-14 md:mx-20 lg:mx-24 mx-6  p-4  md:px-10 lg:px-16  rounded-xl "
           >
-            <h1 className="text-center text-xl font-bold">Lesson details</h1>
+            <h2 className="text-center text-xl font-bold">Lesson details</h2>
             <div className="mt-4 break-words rounded-2xl grid  grid-cols-1 sm:grid-cols-2  justify-center  items-center gap-4 text-lg">
-              <h1>
+              <p>
                 <span className="font-bold">Email: </span>
                 {slot.email}
-              </h1>
-              <h1>
+              </p>
+              <p>
                 <span className="font-bold">Name: </span>
                 {slot.name}
-              </h1>
-              <h1>
+              </p>
+              <p>
                 <span className="font-bold">Timezone: </span>
                 {slot.slotTimezone}
-              </h1>
-              <h1>
+              </p>
+              <p>
                 <span className="font-bold">Slot: </span>
                 {slot.slot}
-              </h1>
-              <h1>
+              </p>
+              <p>
                 <span className="font-bold">Lesson Type: </span>
                 {slot.lessonType}
-              </h1>
+              </p>
               <div className="flex">
                 <span className="font-bold">Lesson completed :</span>
                 <div
@@ -212,7 +212,7 @@ const Reschedule = () => {
               <div className="flex justify-center flex-col md:flex-row items-center mt-4 gap-4 md:gap-10">
                 <Link
                   href={{
-                    pathname: "/RescheduleLesson",
+                    pathname: "/reschedule-lesson",
                     query: { id: slot._id },
                   }}
                 >
@@ -243,9 +243,9 @@ const Reschedule = () => {
         ))
       ) : (
         <div>
-          <h1 className="text-4xl mx-4 text-center mb-16 text-black">
+          <h2 className="text-4xl mx-4 text-center mb-16 text-black">
             There is no lesson that has been booked with this email.
-          </h1>
+          </h2>
         </div>
       )}
     </div>
