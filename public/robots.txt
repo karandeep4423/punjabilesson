@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /book-lesson?lesson=*
+Disallow: /reschedule-cancel-lesson
+Disallow: /reschedule-lesson?id=*
+Disallow: /already-bought-lessons-pack
+
+Sitemap: https://punjabilesson.com/sitemap.xml

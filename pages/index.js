@@ -632,8 +632,8 @@ const Index = () => {
                     ></Image>
                   </div>
                   <div className=" md:w-8/12  flex flex-col justify-center items-center md:items-start text-lg">
-                    <h1>Zaryab</h1>
-                    <h1 className="text-gray-600">Birmingham,UK</h1>
+                    <p>Zaryab</p>
+                    <p className="text-gray-600">Birmingham,UK</p>
                     <p>
                       Punjabi Lesson teachers are cooperative and helpful with
                       myself when it comes to learning Punjabi; currently, we
@@ -662,8 +662,8 @@ const Index = () => {
                     ></Image>
                   </div>
                   <div className=" md:w-8/12  flex flex-col justify-center items-center md:items-start text-lg">
-                    <h1>Gaganpreet</h1>
-                    <h1 className="text-gray-600">Sydney, Australia</h1>
+                    <p>Gaganpreet</p>
+                    <p className="text-gray-600">Sydney, Australia</p>
                     <p>
                       Punjabi Lesson have good teachers. They are teaching
                       Punjabi to my son. My son likes to learn Punjabi from
@@ -692,8 +692,8 @@ const Index = () => {
                     ></Image>
                   </div>
                   <div className=" md:w-8/12  flex flex-col justify-center items-center md:items-start text-lg">
-                    <h1>Sunil</h1>
-                    <h1 className="text-gray-600">Vancouver, Canada</h1>
+                    <p>Sunil</p>
+                    <p className="text-gray-600">Vancouver, Canada</p>
                     <p>
                       Karandeep&apos;s material and approach to teaching was
                       very good. He&apos;s very patient and supportive; and was
