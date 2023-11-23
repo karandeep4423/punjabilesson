@@ -4,5 +4,6 @@ Disallow: /book-lesson?lesson=*
 Disallow: /reschedule-cancel-lesson
 Disallow: /reschedule-lesson?id=*
 Disallow: /already-bought-lessons-pack
+Disallow: /checkout?packId=*
 
 Sitemap: https://punjabilesson.com/sitemap.xml
