@@ -96,7 +96,7 @@ const Checkout = () => {
       toast.success("Your lesson has been booked successfully");
       return;
     } else {
-      toast.error("Server error, Try again");
+      toast.error("Server error, Try again")
     }
   };
   const PayPal = (e) => {
