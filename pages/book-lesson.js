@@ -234,12 +234,12 @@ const Book_lesson = () => {
                 href={{
                   pathname: "/checkout",
                   query: {
-                    packId: encodeURIComponent(router.query.packId || ""),
-                    lesson: encodeURIComponent(router.query.lesson || ""),
-                    schdule: encodeURIComponent(
-                      format(selectedSlot, "EEEE, MMMM d HH:mm zzz")
-                    ),
-                    timezone: encodeURIComponent(selectedOption || ""),
+                    packId: (router.query.packId || ""),
+                    lesson: (router.query.lesson || ""),
+                    // schdule: (
+                    //   format(selectedSlot, "EEEE, MMMM d HH:mm zzz")
+                    // ),
+                    // timezone: (selectedOption || ""),
                   },
                 }}
               >
