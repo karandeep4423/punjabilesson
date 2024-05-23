@@ -160,8 +160,8 @@ const Checkout = () => {
           <div className="flex gap-3 ml-1 mt-3 mb-3 md:mt-0 justify-center  items-center text-xl ">
             <Image className="w-12 h-12" width={20} height={20} alt="checkout" src="/checkout.png"></Image>
             <h2>
-              {router.query.schdule}
-              {router.query.timezone}
+              {decodeURIComponent(router.query.schdule)}
+              {decodeURIComponent(router.query.timezone)}
             </h2>
           </div>
           <div data-aos="fade-up" className="flex pt-3  gap-2">
