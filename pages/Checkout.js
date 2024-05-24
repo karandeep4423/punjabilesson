@@ -14,9 +14,9 @@ const Checkout = () => {
   const [transactionId, setTransactionId] = useState(null);
   const [message, setMessage] = useState("");
   const [slot, setSlot] = useState(null);
-  const [packId, setPackId] = useState(null);
+  // const [packId, setPackId] = useState(null);
   const [slotTimezone, setSlotTimezone] = useState(null);
-  const [lessonType, setLessonType] = useState(null);
+  // const [lessonType, setLessonType] = useState(null);
   const router = useRouter();
   const MySwal = withReactContent(Swal);
 
@@ -67,10 +67,10 @@ const Checkout = () => {
   useEffect(() => {
     setSlot(router.query.schdule);
     setSlotTimezone(router.query.timezone);
-    setLessonType(router.query.lesson);
-    setPackId(router.query.packId);
+    // setLessonType(router.query.lesson);
+    // setPackId(router.query.packId);
     transactionId && BookLessonPaypal();
-  }, [transactionId,router.query.schdule,router.query.timezone,router.query.lesson,router.query.packId]);
+  }, [transactionId,router.query.schdule,router.query.timezone]);
 
   const BookLessonPaypal = async () => {
     const res = await fetch("/api/Lesson/addLessons", {
@@ -154,7 +154,7 @@ const Checkout = () => {
           <div className="bg-sky-400 mt-14 absolute   mix-blend-multiply filter blur-2xl h-8 w-56 "></div>
         </div>
         <form
-          onSubmit={router.query.lesson == "Pack" ? bookLessonPack : PayPal}
+          onSubmit={ PayPal}
           className="h-fit   shadow-[5px_5px_0px_4px_rgba(2,139,199,0.5),_-5px_-5px_0px_rgba(255,255,255,1)] min-w-fit mt-8 rounded-3xl mx-4  sm:mx-32 md:40 lg:mx-56 p-3  md:p-10 mb-16 border-2 border-gray-200"
         >
           <div className="flex gap-3 ml-1 mt-3 mb-3 md:mt-0 justify-center  items-center text-xl ">
@@ -236,11 +236,12 @@ const Checkout = () => {
           <div data-aos="fade-up" className="flex  pt-10 justify-center">
             <button className="text-lg font-medium w-3/4  py-2 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">
               <span className="absolute right-0 w-8 h-28 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-              {router.query.lesson == "Pack"
+              {/* {router.query.lesson == "Pack"
                 ? "Book Lesson"
                 : router.query.lesson == "single"
                 ? "Book Lesson $10 "
-                : "Group Lesson $7"}
+                : "Group Lesson $7"} */}
+                Book Lesson $10
             </button>
           </div>
         </form>
