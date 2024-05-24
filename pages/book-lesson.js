@@ -232,7 +232,7 @@ const Book_lesson = () => {
             <div className="flex  mt-10 justify-center">
               <Link
                 href={{
-                  pathname: "/checkout",
+                  pathname: "/Checkout",
                   query: {
                     packId: (router.query.packId || ""),
                     lesson: (router.query.lesson || ""),
