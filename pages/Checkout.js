@@ -66,13 +66,17 @@ const Checkout = () => {
     const result = await response.json();
     return;
   }
+  const schdule  = router.query.schdule;
+  const timezone = router.query.timezone;
+  const lesson = router.query.lesson;
+  const ID= router.query.packId
   useEffect(() => {
-    setSlot("kkkk");
-    setSlotTimezone("jkj");
-    setLessonType("single");
-    setPackId("karan");
+    setSlot(schdule);
+    setSlotTimezone(timezone);
+    setLessonType(lesson);
+    setPackId(ID);
     transactionId && BookLessonPaypal();
-  }, [transactionId,router.query.schdule,router.query.timezone,router.query.lesson,router.query.packId]);
+  }, [transactionId,schdule,timezone,lesson,ID]);
 
   const BookLessonPaypal = async () => {
     const res = await fetch("/api/Lesson/addLessons", {
