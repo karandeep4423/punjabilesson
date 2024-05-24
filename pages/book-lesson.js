@@ -233,14 +233,14 @@ const Book_lesson = () => {
               <Link
                 href={{
                   pathname: "/checkout",
-                  // query: {
-                  //   // packId: (router.query.packId || ""),
-                  //   lesson: (router.query.lesson || ""),
-                  //   // schdule: (
-                  //   //   format(selectedSlot, "EEEE, MMMM d HH:mm zzz")
-                  //   // ),
-                  //   // timezone: (selectedOption || ""),
-                  // },
+                  query: {
+                    packId: (router.query.packId || ""),
+                    lesson: (router.query.lesson || ""),
+                    schdule: (
+                      format(selectedSlot, "EEEE, MMMM d HH:mm zzz")
+                    ),
+                    timezone: (selectedOption || ""),
+                  },
                 }}
               >
                 <button className="text-xl font-medium px-14 py-3 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">

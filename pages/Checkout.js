@@ -70,10 +70,10 @@ const Checkout = () => {
   }
 
   useEffect(() => {
-    setSlot("hhhh");
-    setSlotTimezone("hgh");
-    setLessonType("hjgj");
-    setPackId("hjgjh");
+    setSlot(schdule);
+    setSlotTimezone(timezone);
+    setLessonType(lesson);
+    setPackId(ID);
     transactionId && BookLessonPaypal();
   }, [transactionId,schdule,timezone,lesson,ID]);
 
