@@ -20,6 +20,7 @@ import { useRouter } from "next/router";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Head from "next/head";
+import Checkout from "./checkout";
 const Book_lesson = () => {
   const router = useRouter();
   let today = startOfDay(new Date());
@@ -234,12 +235,10 @@ const Book_lesson = () => {
                 href={{
                   pathname: "/checkout",
                   query: {
-                    packId: (router.query.packId || ""),
-                    lesson: (router.query.lesson || ""),
-                    schdule: (
-                      format(selectedSlot, "EEEE, MMMM d HH:mm zzz")
-                    ),
-                    timezone: (selectedOption || ""),
+                    // packId: (router.query.packId || ""),
+                    // lesson: (router.query.lesson || ""),
+                    schdule: format(selectedSlot, "EEEE, MMMM d HH:mm zzz"),
+                    timezone: selectedOption || "",
                   },
                 }}
               >
