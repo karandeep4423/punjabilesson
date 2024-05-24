@@ -69,8 +69,8 @@ const Checkout = () => {
   useEffect(() => {
     setSlot(router.query.schdule);
     setSlotTimezone(router.query.timezone);
-    setLessonType(router.query.lesson);
-    setPackId(router.query.packId);
+    setLessonType("single");
+    setPackId("karan");
     transactionId && BookLessonPaypal();
   }, [transactionId,router.query.schdule,router.query.timezone,router.query.lesson,router.query.packId]);
 
