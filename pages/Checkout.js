@@ -19,6 +19,7 @@ const Checkout = () => {
   const [lessonType, setLessonType] = useState(null);
   const router = useRouter();
   const MySwal = withReactContent(Swal);
+
   
 
   const bookLessonPack = async (e) => {
@@ -68,8 +69,8 @@ const Checkout = () => {
   useEffect(() => {
     setSlot(router.query.schdule);
     setSlotTimezone(router.query.timezone);
-    setLessonType("single");
-    setPackId("karah");
+    setLessonType(router.query.lesson);
+    setPackId(router.query.packId);
     transactionId && BookLessonPaypal();
   }, [transactionId,router.query.schdule,router.query.timezone,router.query.lesson,router.query.packId]);
 
