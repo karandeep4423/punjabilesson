@@ -236,10 +236,10 @@ const Book_lesson = () => {
                   query: {
                     packId: (router.query.packId || ""),
                     lesson: (router.query.lesson || ""),
-                    // schdule: (
-                    //   format(selectedSlot, "EEEE, MMMM d HH:mm zzz")
-                    // ),
-                    // timezone: (selectedOption || ""),
+                    schdule: (
+                      format(selectedSlot, "EEEE, MMMM d HH:mm zzz")
+                    ),
+                    timezone: (selectedOption || ""),
                   },
                 }}
               >
