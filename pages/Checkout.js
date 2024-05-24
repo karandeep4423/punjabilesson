@@ -19,8 +19,10 @@ const Checkout = () => {
   const [lessonType, setLessonType] = useState(null);
   const router = useRouter();
   const MySwal = withReactContent(Swal);
-
-  
+  const schdule  = router.query.schdule;
+  const timezone = router.query.timezone;
+  const lesson = router.query.lesson;
+  const ID= router.query.packId;
 
   const bookLessonPack = async (e) => {
     e.preventDefault();
@@ -66,15 +68,12 @@ const Checkout = () => {
     const result = await response.json();
     return;
   }
-  const schdule  = router.query.schdule;
-  const timezone = router.query.timezone;
-  const lesson = router.query.lesson;
-  const ID= router.query.packId
+
   useEffect(() => {
-    setSlot(schdule);
-    setSlotTimezone(timezone);
-    setLessonType(lesson);
-    setPackId(ID);
+    setSlot("hhhh");
+    setSlotTimezone("hgh");
+    setLessonType("hjgj");
+    setPackId("hjgjh");
     transactionId && BookLessonPaypal();
   }, [transactionId,schdule,timezone,lesson,ID]);
 
