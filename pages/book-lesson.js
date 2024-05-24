@@ -235,8 +235,6 @@ const Book_lesson = () => {
                 href={{
                   pathname: "/checkout",
                   query: {
-                    // packId: (router.query.packId || ""),
-                    // lesson: (router.query.lesson || ""),
                     schdule: format(selectedSlot, "EEEE, MMMM d HH:mm zzz"),
                     timezone: selectedOption || "",
                   },
