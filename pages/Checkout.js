@@ -84,7 +84,7 @@ const Checkout = () => {
         message: message,
         slot: slot,
         slotTimezone: slotTimezone,
-        lessonType: lessonType,
+        lessonType: "pack",
       }),
     });
     const result = await res.json();
