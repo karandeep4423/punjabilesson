@@ -32,8 +32,8 @@ const sendMail = async (to, subject, text, html) => {
 
 const sendEmail = async (req, res) => {
   try {
-    const { email, subject, name, slot } = req.body;
-    subject = "Lesson Cancelled";
+    const { email, name, slot } = req.body;
+    const subject = "Lesson Cancelled";
     const html = `<h1>Lesson Cancelled</h1>
       <p>Dear ${name},</p>
       <p>We're sorry to hear that you had to cancel your lesson on ${slot}, but we understand that sometimes unexpected events can happen. We're glad that you let us know in advance, so that we can make the necessary arrangements.</p>
