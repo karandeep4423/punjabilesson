@@ -1,15 +1,40 @@
 import Lesson from "@/modals/Lesson";
 import connectedDb from "@/middleware/mongodb";
-import sgMail from "@sendgrid/mail";
-sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API);
+import nodemailer from "nodemailer";
 
-let sentMailRes;
+const sendMail = async (to, subject, text, html) => {
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: "bachiwind3@gmail.com",
+      pass: process.env.NEXT_PUBLIC_GMAIL || "", // Ensure you have this environment variable set
+    },
+  });
+
+  const mailOptions = {
+    from: '"Photo Grid" <bachiwind3@gmail.com>',
+    to,
+    subject,
+    text,
+    html,
+  };
+
+  try {
+    const info = await transporter.sendMail(mailOptions);
+    return { success: true, info };
+  } catch (err) {
+    return { success: false, error: err };
+  }
+};
 
 const sendEmail = async (req, res) => {
   try {
     const msg = {
       to: [req.body.email, "bachiwind7@gmail.com"], // Change to your recipient
-      from: "hindipunjabitutor@gmail.com", // Change to your verified sender
+      from: "bachiwind7@gmail.com", // Change to your verified sender
       subject: "Lesson Cancelled",
       html: `<h1>Lesson Cancelled</h1>
       <p>Dear ${req.body.name},</p>
@@ -18,10 +43,15 @@ const sendEmail = async (req, res) => {
       <p>Best regards,</p>
       <p>Punjabi Lesson</p>`,
     };
-    const sentEmail = await sgMail.send(msg);
-    return (sentMailRes = sentEmail);
+    const response = await sendMail(
+      [email, "bachiwind7@gmail.com"],
+      subject,
+      "",
+      html
+    );
+    return response.success;
   } catch (err) {
-    return (sentMailRes = err);
+    return response.err;
   }
 };
 
@@ -33,10 +63,10 @@ const handler = async (req, res) => {
         req.body,
         { new: true }
       );
-      await sendEmail(req, res);
-      res
+      const emailResponse = await sendEmail(req, res);      
+      return res
         .status(200)
-        .json({ message: "success", result, emailResMessId: sentMailRes });
+        .json({ message: "success", result, emailResponse });
     } catch (err) {
       return res.status(500).json({ error: "Something went wrong", err });
     }
