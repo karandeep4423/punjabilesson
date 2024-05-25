@@ -15,7 +15,7 @@ const sendMail = async (to, subject, text, html) => {
   });
 
   const mailOptions = {
-    from: '"Photo Grid" <bachiwind3@gmail.com>',
+    from: '"Punjabi Lesson" <bachiwind3@gmail.com>',
     to,
     subject,
     text,
@@ -32,17 +32,14 @@ const sendMail = async (to, subject, text, html) => {
 
 const sendEmail = async (req, res) => {
   try {
-    const msg = {
-      to: [req.body.email, "bachiwind7@gmail.com"], // Change to your recipient
-      from: "bachiwind7@gmail.com", // Change to your verified sender
-      subject: "Lesson Cancelled",
-      html: `<h1>Lesson Cancelled</h1>
-      <p>Dear ${req.body.name},</p>
-      <p>We're sorry to hear that you had to cancel your lesson on ${req.body.slot}, but we understand that sometimes unexpected events can happen. We're glad that you let us know in advance, so that we can make the necessary arrangements.</p>
+    const { email, subject, name, slot } = req.body;
+    subject = "Lesson Cancelled";
+    const html = `<h1>Lesson Cancelled</h1>
+      <p>Dear ${name},</p>
+      <p>We're sorry to hear that you had to cancel your lesson on ${slot}, but we understand that sometimes unexpected events can happen. We're glad that you let us know in advance, so that we can make the necessary arrangements.</p>
       <p>We hope that you will consider rescheduling your lesson at a later time when your schedule allows. We'd love to continue helping you learn and grow in your language studies.</p>
       <p>Best regards,</p>
-      <p>Punjabi Lesson</p>`,
-    };
+      <p>Punjabi Lesson</p>`;
     const response = await sendMail(
       [email, "bachiwind7@gmail.com"],
       subject,
@@ -63,7 +60,7 @@ const handler = async (req, res) => {
         req.body,
         { new: true }
       );
-      const emailResponse = await sendEmail(req, res);      
+      const emailResponse = await sendEmail(req, res);
       return res
         .status(200)
         .json({ message: "success", result, emailResponse });
