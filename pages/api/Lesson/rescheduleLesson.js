@@ -15,7 +15,7 @@ const sendMail = async (to, subject, text, html) => {
   });
 
   const mailOptions = {
-    from: '"Photo Grid" <bachiwind3@gmail.com>',
+    from: '"Punjabi Lesson" <bachiwind3@gmail.com>',
     to,
     subject,
     text,
