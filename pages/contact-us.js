@@ -40,7 +40,7 @@ const Contact = () => {
           }),
         });
         const result = await res.json();
-        if (result.err) {
+        if (result.success == false) {
           toast.error("Server error, Try again");
           return;
         }

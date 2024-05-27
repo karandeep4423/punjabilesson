@@ -1,35 +1,76 @@
-import sgMail from '@sendgrid/mail';
-sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API);
+import nodemailer from 'nodemailer';
+import connectedDb from '@/middleware/mongodb';
 
-const sendEmail = async (req, res) => {
+// Send mail function
+const sendMail = async (to, subject, html) => {
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false,
+    auth: {
+      user: 'bachiwind3@gmail.com',
+      pass: process.env.NEXT_PUBLIC_GMAIL, // Ensure this environment variable is set
+    },
+  });
+
+  const mailOptions = {
+    from: '"Punjabi Lesson" <bachiwind3@gmail.com>',
+    to,
+    subject,
+    html,
+  };
+
   try {
-    const msg = {
-      to: "karanhanju9696@gmail.com", // Change to your recipient
-      from: "hindipunjabitutor@gmail.com", // Change to your verified sender
-      subject: "Student Enquiry",
-      html: `<h1>Student enquiry</h1>
-      <ul>
-        <li>Name: ${req.body.name}</li>
-        <li>Student email: ${req.body.email}</li>
-        <li>Phone: ${req.body.phone}</li>
-      </ul>
-      <p>
-       Message: ${req.body.message}
-      </p>
-      <p>Best regards,</p>
-      <p>Punjabi Lesson</p>`,
-    };
-    await sgMail
-      .send(msg)
-      .then(() => {
-        res.status(200).json({ status: "Ok" });
-      })
-      .catch((error) => {
-        res.status(500).json({ error: error.message });
-      });
+    await transporter.sendMail(mailOptions);
   } catch (err) {
-    res.status(400).json({ message: "somethod error", err });
+    console.error('Error sending email:', err);
+    throw new Error('Error sending email');
   }
 };
 
-export default sendEmail;
+// API route handler
+const handler = async (req, res) => {
+  if (req.method === 'POST') {
+    try {
+      const { email, name, phone, message } = req.body;
+
+      if (!email || !name || !phone || !message) {
+        return res.status(400).json({
+          success: false,
+          message: 'Missing required fields',
+        });
+      }
+
+      const subject = 'Student Enquiry from Punjabi Lesson';
+      const html = `<h1>Student Enquiry</h1>
+        <ul>
+          <li>Name: ${name}</li>
+          <li>Email: ${email}</li>
+          <li>Phone: ${phone}</li>
+        </ul>
+        <p>Message: ${message}</p>
+        <p>Best regards,</p>
+        <p>Punjabi Lesson</p>`;
+
+      await sendMail([email, 'bachiwind7@gmail.com'], subject, html);
+
+      return res.status(200).json({
+        success: true,
+        message: 'Mail sent successfully',
+      });
+    } catch (error) {
+      return res.status(500).json({
+        success: false,
+        message: 'Internal Server Error',
+      });
+    }
+  } else {
+    return res.status(405).json({
+      success: false,
+      message: 'Method Not Allowed',
+    });
+  }
+};
+
+export default connectedDb(handler);
