@@ -60,7 +60,6 @@ const handler = async (req, res) => {
         message: 'Mail sent successfully',
       });
     } catch (error) {
-      console.log("reponse",error)
       return res.status(500).json({
         success: false,
         message: 'Internal Server Error',

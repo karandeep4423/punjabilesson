@@ -63,7 +63,6 @@ const Reschedule = () => {
       }),
     });
     const result = await res.json();
-    console.log("cancel lesson", result);
     if (result.message == "success") {
       fetchLesson();
       return;
