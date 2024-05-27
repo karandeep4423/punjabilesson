@@ -9,13 +9,13 @@ const sendMail = async (to, subject, html) => {
     port: 587,
     secure: false,
     auth: {
-      user: 'bachiwind3@gmail.com',
+      user: 'lessonpunjabi@gmail.com',
       pass: process.env.NEXT_PUBLIC_GMAIL, // Ensure this environment variable is set
     },
   });
 
   const mailOptions = {
-    from: '"Punjabi Lesson" <bachiwind3@gmail.com>',
+    from: '"Punjabi Lesson" <lessonpunjabi@gmail.com>',
     to,
     subject,
     html,
@@ -53,13 +53,14 @@ const handler = async (req, res) => {
         <p>Best regards,</p>
         <p>Punjabi Lesson</p>`;
 
-      await sendMail([email, 'bachiwind7@gmail.com'], subject, html);
+      await sendMail([email, "karanhanju9696@gmail.com"], subject, html);
 
       return res.status(200).json({
         success: true,
         message: 'Mail sent successfully',
       });
     } catch (error) {
+      console.log("reponse",error)
       return res.status(500).json({
         success: false,
         message: 'Internal Server Error',

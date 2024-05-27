@@ -9,13 +9,13 @@ const sendMail = async (to, subject, text, html) => {
     port: 587,
     secure: false,
     auth: {
-      user: "bachiwind3@gmail.com",
+      user: "lessonpunjabi@gmail.com",
       pass: process.env.NEXT_PUBLIC_GMAIL || "", // Ensure you have this environment variable set
     },
   });
 
   const mailOptions = {
-    from: '"Punjabi Lesson" <bachiwind3@gmail.com>',
+    from: '"Punjabi Lesson" <lessonpunjabi@gmail.com>',
     to,
     subject,
     text,
@@ -38,14 +38,14 @@ const sendEmail = async (req, res) => {
     <h1>Lesson Rescheduled</h1>
     <p>Dear ${name},</p>
     <p>We're writing to confirm that you have successfully rescheduled your lesson on <span><h1>${slot} ${slotTimezone}</h1></span>. We're glad to see that you're taking control of your learning experience and making it work for your schedule.</p>
-    <p>If you have any questions or concerns about this rescheduled lesson, please don't hesitate to get in touch with us at bachiwind3@gmail.com. We're here to help.</p>
+    <p>If you have any questions or concerns about this rescheduled lesson, please don't hesitate to get in touch with us at lessonpunjabi@gmail.com. We're here to help.</p>
     <p>We're looking forward to seeing you at your rescheduled lesson and hope that you continue to have a great learning experience with us.</p>
     <p>Best regards,</p>
     <p>Punjabi Lesson</p>
   `;
 
   const response = await sendMail(
-    [email, "bachiwind7@gmail.com"],
+    [email, "karanhanju9696@gmail.com"],
     subject,
     "",
     html

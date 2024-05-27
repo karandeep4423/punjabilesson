@@ -9,13 +9,13 @@ const sendMail = async (to, subject, text, html) => {
     port: 587,
     secure: false,
     auth: {
-      user: "bachiwind3@gmail.com",
+      user: "lessonpunjabi@gmail.com",
       pass: process.env.NEXT_PUBLIC_GMAIL || "", // Ensure you have this environment variable set
     },
   });
 
   const mailOptions = {
-    from: '"Punjabi Lesson" <bachiwind3@gmail.com>',
+    from: '"Punjabi Lesson" <lessonpunjabi@gmail.com>',
     to,
     subject,
     text,
@@ -52,7 +52,7 @@ const sendEmail = async (req, res) => {
       </ul>
       <p>
         If you have any questions or concerns about this class, please
-        feel free to contact us at bachiwind3@gmail.com . We'll
+        feel free to contact us at lessonpunjabi@gmail.com . We'll
         be happy to help you out.
       </p>
       <p>
@@ -63,7 +63,7 @@ const sendEmail = async (req, res) => {
       <p>Punjabi Lesson</p>`;
 
     const response = await sendMail(
-      [email, "bachiwind7@gmail.com"],
+      [email, "karanhanju9696@gmail.com"],
       subject,
       "",
       html

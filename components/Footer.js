@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="flex flex-col text-gray-300 font-medium space-y-4 pt-10">
             <h2 className="text-xl text-white font-medium">Contact us</h2>
             <p>Bachiwind, Amritsar</p>
-            <a href="mailto:bachiwind3@gmail.com">bachiwind3@gmail.com</a>
+            <a href="mailto:bachiwind3@gmail.com">lessonpunjabi@gmail.com</a>
             <a href="tel:+918727989814">+918727989814</a>
           </div>
         </div>

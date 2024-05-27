@@ -9,13 +9,13 @@ const sendMail = async (to, subject, text, html) => {
     port: 587,
     secure: false,
     auth: {
-      user: "bachiwind3@gmail.com",
+      user: "lessonpunjabi@gmail.com",
       pass: process.env.NEXT_PUBLIC_GMAIL || "", // Ensure you have this environment variable set
     },
   });
 
   const mailOptions = {
-    from: '"Punjabi Lesson" <bachiwind3@gmail.com>',
+    from: '"Punjabi Lesson" <lessonpunjabi@gmail.com>',
     to,
     subject,
     text,
@@ -40,13 +40,13 @@ const sendEmail = async (req, res) => {
     <p>Your payment <strong>${
       req.body.amount
     }$</strong> has been successfully processed and your pack of five hour lessons is now available. To book your lessons, simply go to booking page and click already bought pack  and select the dates and times that work best for you.</p>
-    <p>If you have any questions or concerns about your pack of five hour lessons, please don't hesitate to get in touch with us at [Your Contact Information]. We're here to help.</p>
+    <p>If you have any questions or concerns about your pack of five hour lessons, please don't hesitate to get in touch with us at lessonpunjabi@gmail.com . We're here to help.</p>
     <p>We're looking forward to helping you achieve your language goals and hope that you enjoy your pack of five hour lessons.</p>
     <p>Best regards,</p>
     <p>Punjabi Lesson</p>`;
 
     const response = await sendMail(
-      [email, "bachiwind7@gmail.com"],
+      [email, "karanhanju9696@gmail.com"],
       subject,
       "",
       html
@@ -62,10 +62,10 @@ const handler = async (req, res) => {
     let lessonPacks = new LessonPack(req.body);
     try {
       await lessonPacks.save();
-      await sendEmail(req, res);
+      const emailResponse = await sendEmail(req, res);
       res
         .status(200)
-        .json({ message: "success", lessonPacks, emailResMessId: sentMailRes });
+        .json({ message: "success", lessonPacks, emailResponse });
     } catch (err) {
       res.status(400).json({ message: "Error saving lesson", err });
     }

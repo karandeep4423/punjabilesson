@@ -105,7 +105,7 @@ const AlreadyBought = () => {
                     </p>{" "}
                     <Link
                       href={{
-                        pathname: "/Booking",
+                        pathname: "/choose-your-lesson",
                       }}
                     >
                       <button className=" px-16 text-lg font-medium  py-2 rounded-xl text-center overflow-hidden group bg-sky-500 relative hover:bg-gradient-to-r hover:from-sky-500 hover:to-sky-500 text-white hover:ring-2 hover:ring-offset-2 hover:ring-sky-400 transition-all ease-out duration-300">
@@ -117,7 +117,7 @@ const AlreadyBought = () => {
                 ) : (
                   <Link
                     href={{
-                      pathname: "/Book_lesson",
+                      pathname: "/book-lesson",
                       query: { lesson: "Pack", packId: slot._id },
                     }}
                   >
