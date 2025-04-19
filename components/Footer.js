@@ -11,9 +11,9 @@ const Footer = () => {
               Punjabi Lesson
             </h2>
             <p className="text-gray-300 font-medium">
-            We are a team of qualified teachers with industry-proven years of
-            experience. Book a class according to your availability to open new
-            door of language.
+              We are a team of qualified teachers with industry-proven years of
+              experience. Book a class according to your availability to open
+              new door of language.
             </p>
           </div>
           <div className="flex flex-col text-gray-300 font-medium space-y-4 pt-10">
@@ -29,7 +29,9 @@ const Footer = () => {
             <Link href="/choose-your-lesson#book-lesson">Book a Lesson</Link>
             <Link href="/choose-your-lesson#group-class">Group Class</Link>
             <Link href="/choose-your-lesson#buy-hours">Buy Hours Pack</Link>
-            <Link href="/choose-your-lesson#subscription">Get Subscription</Link>
+            <Link href="/choose-your-lesson#subscription">
+              Get Subscription
+            </Link>
           </div>
           <div className="flex flex-col text-gray-300 font-medium space-y-4 pt-10">
             <h2 className="text-xl text-white font-medium">Contact us</h2>
@@ -38,9 +40,22 @@ const Footer = () => {
             <a href="tel:+918727989814">+918727989814</a>
           </div>
         </div>
-        <p className="text-center text-gray-300 py-6">
+        <p className="text-center text-gray-300 pt-6">
           Copyright ©2023 All rights reserved
         </p>
+        <p className="text-center py-3 text-gray-300">
+          Website developed by{" "}
+          <a
+            href="https://numispark.com"
+            title="NumiSpark – agence communication création web & mobile, marketing digital & seo et design"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-white underline"
+            aria-label="Visit NumiSpark agence communication création web & mobile, marketing digital & seo et design"
+          >
+            NumiSpark
+          </a>
+        </p>{" "}
       </div>
     </div>
   );
